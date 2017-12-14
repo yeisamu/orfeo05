@@ -1,0 +1,42 @@
+PHP Warning:  Module 'odbc' already loaded in Unknown on line 0
+PHP Warning:  pg_exec(): Query failed: ERROR:  no existe la columna «sysdate» in /var/www/html/orfeo-3.8.0p/adodb/drivers/adodb-postgres64.inc.php on line 689
+PHP Warning:  pg_exec(): Query failed: ERROR:  error de sintaxis al final de la entrada at character 53 in /var/www/html/orfeo-3.8.0p/adodb/drivers/adodb-postgres64.inc.php on line 689
+sendmail: fatal: No recipient addresses found in message header
+PHP Fatal error:  Call to a member function MoveNext() on a non-object in /var/www/html/orfeo-3.8.0p/radicacion/busca_agendados.php on line 86
+Alertas para los documentos agendados vencidos<br>-----
+(postgres7): SELECT RADI_NUME_RADI AS RADICADO, 
+		SGD_AGEN_OBSERVACION, 
+		USUA_DOC, 
+		SGD_AGEN_FECHPLAZO AS PLAZO, 
+		round(SGD_AGEN_FECHPLAZO-sysdate) as HID_DIAS_R, 
+		DEPE_CODI, 
+		SGD_AGEN_ACTIVO
+	FROM SGD_AGEN_AGENDADOS
+	WHERE SGD_AGEN_ACTIVO=1
+-----
+-1: ERROR:  no existe la columna «sysdate»
+	ADOConnection._Execute(SELECT RADI_NUME_RADI AS RADICADO,
+		SGD_AGEN_OBSERVACION,
+		USU..., false)% line  838, file: /var/www/html/orfeo-3.8.0p/adodb/adodb.inc.php
+ADOConnection.Execute(SELECT RADI_NUME_RADI AS RADICADO,
+		SGD_AGEN_OBSERVACION,
+		USU..., false)% line  620, file: /var/www/html/orfeo-3.8.0p/adodb/adodb.inc.php
+ADOConnection.Query(SELECT RADI_NUME_RADI AS RADICADO,
+		SGD_AGEN_OBSERVACION,
+		USU...)% line   33, file: /var/www/html/orfeo-3.8.0p/radicacion/busca_agendados.php
+<br> rad  plazo  dias -----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_DOC=
+-----
+-1: ERROR:  error de sintaxis al final de la entrada at character 53
+	ADOConnection._Execute(SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_DOC=, false)% line  838, file: /var/www/html/orfeo-3.8.0p/adodb/adodb.inc.php
+ADOConnection.Execute(SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_DOC=, false)% line  620, file: /var/www/html/orfeo-3.8.0p/adodb/adodb.inc.php
+ADOConnection.Query(SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_DOC=)% line   51, file: /var/www/html/orfeo-3.8.0p/radicacion/busca_agendados.php
+No envio correo

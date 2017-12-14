@@ -1,0 +1,12 @@
+
+
+
+La herramienta phpxref provee una forma de estudiar el arbol de llamados entre
+funciones. Muy vieja guardia pero util para los analisis.
+
+Ingrese al directorio y corra el phpxref.pl. El archivo de configuracion ya 
+esta adaptado para dejar la salida en el directorio output.
+
+Borre el contenido de output/ cada vez que lo use. La estructura cambia y no
+debe incluirse esta documentacion el el repositorio.
+

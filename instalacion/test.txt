@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <title>Sistema de Gesti&oacute;n Documental Orfeo/GPL - Secuencias de radicaci&oacute;n</title>
+  </head>
+  <body>
+    <form name='frmInfoConexionBD' id='frmInfoConexionBD' method='GET' action="/trunk/instalacion/secuenciasRadicacion.php">
+      Conexi&oacute;n a la BD:
+      <table>
+        <tr>
+          <td>
+	    <input type='radio' name='modoConexionBD' value='0' checked>
+	    Usar archivo config.php
+	  </td>
+        </tr>
+        <tr>
+	  <td>
+	    <input type='radio' name='modoConexionBD' value='1'>
+	    Ingresar datos de conexi&oacute;n a la BD
+	  </td>
+	</tr>
+	<tr>
+	  <td>Motor de BD:</td>
+	  <td>
+	    <input type='radio' name='driver' value='postgres' checked>Postgres
+	    <br>
+	    <input type='radio' name='driver' value='oci8'>Oracle
+	  </td>
+	  <td>Nombre de la BD:</td>
+	  <td><input type='text' name='bd' value='' ></td>
+	</tr>
+	<tr>
+	  <td>Servidor:</td>
+	  <td><input type='text' name='servidor' value='localhost'></td>
+	  <td>Puerto:</td>
+	  <td><input type='text' name='puerto' value='5432'></td>
+	</tr>
+	<tr>
+          <td>Usuario de conexi&oacute;n a la BD:</td>
+	  <td><input type='text' name='usuario' value='' ></td>
+          <td>Contrase&ntilde;a de conexi&oacute;n a la BD:</td>
+	  <td> <input type='password' name='contrasena'></td>
+        </tr>
+	<tr>
+	  <td>
+	    <input type='submit' value='Generar SQL Crear Secuencias' name='sqlCrearSecuencias'>
+	    <input type='submit' value='Generar SQL Reiniciar Secuencias' name='sqlReiniciarSecuencias'>
+	  </td>
+	</tr>
+	  <td>
+	    <input type='submit' value='Ejecutar SQL Crear Secuencias' name='crearSecuencias'>
+	    <input type='submit' value='Ejecutar SQL Reiniciar Secuencias' name='reiniciarSecuencias'>
+	  </td>
+	<tr>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>
+-----
+(postgres7): SELECT a.attname, t.typname, a.attlen, a.atttypmod, a.attnotnull, a.atthasdef, a.attnum 
+		FROM pg_class c,  pg_attribute a, pg_type t 
+		WHERE relkind = 'r' AND (c.relname='dependencia' or c.relname = lower('dependencia')) and a.attname not like '....%'
+AND a.attnum > 0 AND a.atttypid = t.oid AND a.attrelid = c.oid ORDER BY a.attnum
+-----
+-----
+(postgres7): SELECT ic.relname AS index_name,  a.attname AS column_name, i.indisunique AS unique_key,  i.indisprimary AS primary_key 
+	FROM pg_class bc,  pg_class ic,  pg_index i,  pg_attribute a WHERE bc.oid = i.indrelid AND ic.oid = i.indexrelid AND (i.indkey[0] = a.attnum OR i.indkey[1] = a.attnum OR i.indkey[2] = a.attnum OR i.indkey[3] = a.attnum OR i.indkey[4] = a.attnum OR i.indkey[5] = a.attnum OR i.indkey[6] = a.attnum OR i.indkey[7] = a.attnum) AND a.attrelid = bc.oid AND bc.relname = 'dependencia'
+-----
+-----
+(postgres7): SELECT d.adnum as num,  d.adsrc as def from pg_attrdef d,  pg_class c where d.adrelid=c.oid and c.relname='dependencia' order by d.adnum
+-----
+-----
+(postgres7): SELECT depe_rad_tp1, depe_rad_tp2, depe_rad_tp7, depe_rad_tp3, depe_rad_tp4, depe_rad_tp5, depe_rad_tp6, depe_rad_tp8 FROM dependencia
+-----
+DROP SEQUENCE secr_tp1_100;<br>DROP SEQUENCE secr_tp2_100;<br>DROP SEQUENCE secr_tp7_100;<br>DROP SEQUENCE secr_tp3_100;<br>DROP SEQUENCE secr_tp4_630;<br>DROP SEQUENCE secr_tp5_100;<br>DROP SEQUENCE secr_tp6_100;<br>DROP SEQUENCE secr_tp8_100;<br>DROP SEQUENCE secr_tp1_NULL;<br>DROP SEQUENCE secr_tp2_NULL;<br>DROP SEQUENCE secr_tp7_NULL;<br>DROP SEQUENCE secr_tp3_NULL;<br>DROP SEQUENCE secr_tp4_NULL;<br>DROP SEQUENCE secr_tp5_NULL;<br>DROP SEQUENCE secr_tp6_NULL;<br>DROP SEQUENCE secr_tp8_NULL;<br>DROP SEQUENCE secr_tp1_998;<br>DROP SEQUENCE secr_tp2_998;<br>DROP SEQUENCE secr_tp7_998;<br>DROP SEQUENCE secr_tp3_998;<br>DROP SEQUENCE secr_tp4_998;<br>DROP SEQUENCE secr_tp5_998;<br>DROP SEQUENCE secr_tp6_998;<br>DROP SEQUENCE secr_tp8_998;<br>CREATE SEQUENCE secr_tp1_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp1_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp2_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp2_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp7_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp7_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp3_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp3_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp4_630
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp4_630 OWNER TO admin;<br>CREATE SEQUENCE secr_tp5_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp5_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp6_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp6_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp8_100
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp8_100 OWNER TO admin;<br>CREATE SEQUENCE secr_tp1_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp1_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp2_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp2_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp7_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp7_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp3_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp3_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp4_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp4_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp5_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp5_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp6_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp6_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp8_NULL
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp8_NULL OWNER TO admin;<br>CREATE SEQUENCE secr_tp1_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp1_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp2_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp2_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp7_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp7_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp3_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp3_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp4_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp4_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp5_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp5_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp6_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp6_998 OWNER TO admin;<br>CREATE SEQUENCE secr_tp8_998
+				INCREMENT 1
+				MINVALUE 1
+				MAXVALUE 9223372036854775807
+				START 1
+				CACHE 1;
+				ALTER TABLE secr_tp8_998 OWNER TO admin;<br>

@@ -1,0 +1,112 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+Title : Wufoo Form Structure
+Author : Infinity Box Inc.
+URL : http://wufoo.com
+
+Last Updated : September 30, 2008
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+body{
+	margin:7px 0 15px 0;
+	text-align:center;
+	font-size:small;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+#container{
+	text-align:left;
+	background:#fff;
+/*    border-style: solid;
+    border-color: #015967;
+    background-color: #F2F2F2;*/
+
+}
+#container, #top, #bottom, #footer{
+	margin:0 auto;
+	width:50%;
+}
+
+#encabezado{
+    background: url("../../imagenes/min_cabezote.gif") no-repeat scroll 0 0 #227384;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    height: 24px;
+    padding-right: 10px;
+    padding-top: 42px;
+    text-align: right;
+}
+
+#top, #bottom
+	width:650px;
+	height:10px !important;
+	display:block !important;
+}
+#top{
+	margin-top:10px;
+}
+
+form.wufoo{
+	margin:20px 20px 0 20px;
+	padding:0 0 20px 0;
+}
+
+/* ----- LOGO ----- */
+
+h1{
+	margin:0;
+	padding:0;
+	min-height:0;
+	background-color:#dedede;
+	text-indent:-9000px;
+	text-decoration:none;
+}
+
+img, a img{
+	border:none;
+}
+
+* html img { 
+	behavior: url(/images/iepngfix.htc);
+}
+
+.hide{
+	display:none !important;
+}
+
+.separator{
+	height: 50px;
+	display : block;
+}
+
+h4, h2{
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	vertical-align:middle;
+	text-align:center;
+	color: white;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #A4A4A4), color-stop(1, #C5C5C5) );background:-moz-linear-gradient( center top, #A4A4A4 5%, #C5C5C5 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#C5C5C5', endColorstr='#82E61E');background-color:#A4A4A4; color:#FFFFFF; font-size: 12px; font-weight: bold; border-left: 1px solid #36752D;
+	padding-top:6px;
+	width :100%;
+	height:30px;
+	margin :2px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+fieldset{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+a {
+  color:black;
+}
+
+/*css para tablas en el modulo de consultas web*/
+
+
+.datagrid table { border-collapse: collapse; text-align: left; width: 99%; margin:1px; } .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 3px solid #929696; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; margin:5px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; color:#FFFFFF; font-size: 12px; font-weight: bold; border-left: 1px solid #A3A3A3; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #00496B; border-left: 1px solid #848B8F;font-size: 10px;border-bottom: 1px solid #AEB8BD;font-weight: normal; }.datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }

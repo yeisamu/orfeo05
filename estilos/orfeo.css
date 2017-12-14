@@ -1,0 +1,659 @@
+body{
+    font-family: "Source Sans Pro",sans-serif !important;
+}
+
+img#ico{
+    position: absolute;;
+    width:2%;
+}
+
+input {
+    margin-left: 5px;
+}
+
+td p{
+    font-size: 12px;
+}
+.cajaBotonesMedio{
+    height: 40px;
+}
+
+label{
+    margin-left: 5px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.small{
+    padding: 1%;
+    text-align: center;
+    width: 7%;
+}
+
+.medium{
+    padding: 1%;
+    text-align: center;
+    width: 10%;
+}
+
+.big{
+    text-align: center;
+    width: 15%;
+}
+
+.cla{
+    background-color: #F9EDc3;
+}
+
+.osc{
+    background-color: #F5E0B1;
+}
+
+.vist{
+    color: #3C7D47;
+}
+
+.leidos {
+    font-size: 12px;
+    /*    font-weight: bolder;*/
+    color: #1c4056;
+    text-decoration: none;
+}
+
+.listasCortas{
+    height: 3px;
+}
+
+.no_leidos {
+    font-size: 12px;
+    /*    font-weight: bolder;*/
+    color: #CF2B38;
+    text-decoration: none;
+}
+
+.listado1 {
+    font-size: 12px;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+    background-color: #F5DFB0;
+    text-align: left;
+    vertical-align: middle;
+    height: 30px;
+}
+.listado2 {
+    font-size: 12px;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(246, 237, 217);
+    text-align: left;
+    vertical-align: middle;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.titulos2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #FFF;
+    background-color: rgb(211, 63, 75);
+    text-indent: 5pt;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.titulos3 {
+    font-size: 12px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 64, 86);
+    text-indent: 5pt;
+    vertical-align: middle;
+    text-align: center;
+    height: 30px;
+}
+/*Tablas que tienen en los encabezados enlaces bootstrap coloca su color por defecto*/
+.titulos3 a{
+    color :#FFF;
+}
+
+.botones{
+    /*  display: inline-block;*/
+    font-size: 14px;
+    text-align: center;
+    background-color: #969595;
+    border-radius: 10px;
+    height: 25px;
+    width: 145px;
+    color: #fff;
+    /*    padding: 1%;*/
+    /*  margin-left: 30%;*/
+}
+.botonesMediano2{
+    /*  display: inline-block;*/
+    font-size: 14px;
+    text-align: center;
+    background-color: #969595;
+    border-radius: 10px;
+    height: 25px;
+    width: 175px;
+    color: #fff;
+    /*    padding: 1%;*/
+    /*  margin-left: 30%;*/
+}
+
+.tablas { 
+    font-size: 12px;
+    font-style: normal;
+    /*font-weight: bolder;*/
+    color: #FFFFFF;
+    background-color: rgb(211, 63, 75);
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+
+#titulo {
+    /*text-transform: capitalize;*/
+    padding: 0.5%;
+    font-size: 21px;
+    background-color: #D33F4B;
+    border-radius: 30px 30px 0px 0px;
+    color: #FFF;
+    font-family: "Source Sans Pro",sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    border-bottom-color: rgba(128, 128, 128, 0);
+}
+
+#titulo #tituloTexto {
+    margin-left: 10%;
+}
+
+.titulo1 {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 15px;
+    color: #FFFFFF;
+    background-color: rgb(211, 63, 75);
+    text-indent: 5pt;
+}
+
+.info {
+    font-size: 12px;
+    font-style: normal;
+    color: #000000;
+    text-indent: 5pt;
+}
+
+.tex_area {
+    font-size: 12px;
+    color: #000000;
+    text-indent: 2pt;
+}
+
+.botones_2 {
+    font-size: 14px;
+    background-color: #e3ad02;
+    color: #FFFFFF;
+    text-align: center;
+    height: 20px;
+    width: 30px;
+    border: thin solid #999999;
+}
+
+.botones_3 { 
+    font-size: 14px;
+    /*font-weight: bolder;*/
+    background-color: #e3ad02;
+    color: #FFFFFF;
+    text-align: center;
+    height: 20px;
+    width: 70px;
+    border: thin solid #999999;
+}
+
+.botones_mediano {
+    font-size: 14px;
+    background-color: #969595;
+    color: #FFFFFF;
+    text-align: center;
+    height: 25px;
+    width: 115px;
+    border-radius: 10px
+}
+
+.botones_mediano2 { 
+    font-size: 14px;
+    /*font-weight: bolder;*/
+    background-color: #e3ad02;
+    color: #FFFFFF;
+    text-align: center;
+    height: 25px;
+    width: 130px;
+    border: thin solid #FFFFFF;
+}
+
+.botones_largo {
+    font-size: 14px;
+    background-color: #969595;
+    color: #FFFFFF;
+    text-align: center;
+    height: 25px;
+    width: 350px;
+    border-radius: 10px;
+    /*    border: thin solid #FFFFFF;*/
+}
+
+.select {
+    margin-left: 5px;
+    font-size: 14px;
+    /*font-weight: bolder;*/
+    background-color: #FFFFFF;
+    color: #000000;
+    border: thin solid #999999;
+}
+
+.selectReducido {
+    font-size: 12px;
+    /*font-weight: bolder;*/
+    background-color: #FFFFFF;
+    color: #000000;
+    border: thin solid #999999;
+    width: 700px; 
+    overflow: auto;;
+}
+
+.titulos5 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #000000;
+    /*    background-color: #e0e6e7;*/
+    background-color: #F5DFB0;
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+
+#menuListar {
+    border: thin solid #FFF;
+}
+
+.borde_tab {
+    /*    border: thin solid #000;*/
+    font-family: "Source Sans Pro",sans-serif !important;
+}
+
+.borde_tab a{
+    text-decoration: underline;
+}
+
+.borde_tab td{
+    padding: 8px;
+}
+
+.borde_tabReducido td{
+    padding: 5px;
+}
+
+.menuEnlaces {
+    /*    border: thin solid #000;*/
+    font-family: "Source Sans Pro",sans-serif;
+}
+
+.menuEnlaces a{
+    text-decoration: underline;
+}
+
+.menuEnlaces td{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+}
+
+.leidos2 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #006690;
+    text-decoration: none;
+}
+
+.lista {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    text-align: left;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.listado2_center {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+    background-color: #e3e8ec;
+    text-align: center;
+    text-indent: 5pt;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.listado2_no_identa { 
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+    background-color: #e3e8ec;
+    text-align: left;
+    text-indent: 0pt;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.listado5 { 
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+    background-color: #e3e8ec;
+    text-align: left;
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+
+.paginacion { 
+    font-size: 12px;
+    font-weight: bold;
+    color: #377584;
+    text-decoration: none;
+    text-align: center;
+}
+
+.vinculos {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #002777;
+    text-align: left;
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+.vinculosCabezote {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #FFF;
+    text-align: left;
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+
+.botones_funcion {
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: #377584;
+    color: #FFFFFF;
+    text-align: center;
+    border: thin solid #FFFFFF;
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+
+.titulos4 {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 10px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    background-color: #D33F4B;
+    text-indent: 5pt;
+    height: 45px;
+}
+
+.tdTitulo{
+    height: 25px !important;
+}
+
+.alarmas {
+    font-size: 14px;
+    font-weight: bold;
+    color: #990000;
+    text-align: center;
+}
+.alarmasOk{
+    color: green !important;
+}
+
+.menu_princ {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #086478;
+    cursor: pointer;
+    text-decoration: none;
+    text-indent: 3pt;
+}
+
+.titulosError {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #FF0000;
+    /*background-color: #F5E0B1; Desactivado por formulatio envios dependencias verificar si afecta otros */
+    text-indent: 5pt;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.titulosError2 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #FF0000;
+    text-indent: 5pt;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.tSel {
+    background-color: #00FF22;
+    font-size: 12pt; 
+    font-weight: bold;
+    color: #223399;
+
+}
+
+.porExcluir {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.vinculoTipifAnex {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    color: #009060;
+    text-align: left;
+    text-indent: 5pt;
+    vertical-align: middle;
+}
+
+#turnkey-credit {
+    display: none !important;
+}
+
+/*Formulario login  correo*/
+.panel-heading {
+    padding: 5px 15px;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(211, 63, 75) !important;
+}
+
+.panel-footer {
+    padding: 1px 15px;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(211, 63, 75) !important;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.btn-primary{
+    background-color: #969595 !important;
+    border-color: #969595;
+}
+
+.btn-primary2{
+    text-decoration: none;
+    color: #FFF;
+    background-color: #B0B0B0 !important;
+    border-color: #B0B0B0;
+}
+
+.btn-primary2:hover{
+    color: #FFF;
+    background-color: #D8D8D8 !important;
+    border-color: #D8D8D8;
+}
+
+.btn-primary:hover{
+    background-color: #B7B7B7 !important;
+    border-color: #B7B7B7;
+}
+
+/*menu opciones correo*/
+
+.panelCorreo{
+    position: fixed;
+    width: 97%;
+    margin-top: 10%;
+    z-index: 1000000000000000000000;
+    position: absolute;
+}
+.panelCorreo ul li{
+    border:1px solid #fff;
+    width: 100%;
+    margin-left: 2%;
+    background:#D1414B;
+    padding: 5%;
+}
+.panelCorreo ul li a{
+    display: inline-table;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s all;
+}
+.panelCorreo ul li a:hover{
+    transition: .5s all;
+    /*font-size: 115%;*/
+    background-color: #fff;
+    color:#D1414B;
+}
+.tit{
+    border-radius: 30px 30px 0 0;
+}
+.tit h4{
+    color:#fff;
+}
+
+ul, ol {
+    list-style: outside none none;
+}
+
+
+ul.tabbernav li a {
+    border-radius: 11px 11px 0px 0px;
+    padding: 3px 0.5em;
+    margin-left: 3px;
+    border-width: 1px 1px medium;
+    border-style: solid solid none;
+    border-color: #778 #778 -moz-use-text-color;
+    border-image: none;
+    background: #DDE none repeat scroll 0% 0%;
+    text-decoration: none;
+    color: black; 
+}
+
+ul.tabbernav li a:hover {
+    background-color: #AAE;
+}
+
+ul.tabbernav li.tabberactive a {
+    background-color: #F5E0B1;
+}
+
+ul.tabbernav li.tabberactive a:hover{
+    background-color: #F6EDD9;
+}
+
+ul.tabbernav {
+    margin: 0px;
+    padding: 3px 0px;
+    font: bold 14px Verdana,sans-serif;
+}
+ul.tabbernav li {
+    display: inline;
+}
+
+.alertaFlotante{
+    border-radius: 30px;
+    background-color: #D33F4B;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.alertaFlotante h5 {
+    padding: 2%;
+    color: #FFF;
+}
+
+
+.cuerpoMail{
+    padding-top: 0.5px;
+    background-color: #F9EDC3;
+    width: 95%;
+    margin-left: 2.5%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.headMail{
+    width: 90%;
+    background-color: #F5E0B1;
+    margin: 2.5%;
+}
+
+.mensajeMail{
+    font-family: "Source Sans Pro",sans-serif;
+    width: 88%;
+    margin-left: 3.5%;
+    padding: 2px;
+}

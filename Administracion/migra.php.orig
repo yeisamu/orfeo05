@@ -1,0 +1,96 @@
+<?
+session_start();
+$ruta_raiz = "..";
+include_once "$ruta_raiz/include/db/ConnectionHandler.php";
+if(!isset($_SESSION['dependencia']))
+        include "$ruta_raiz/rec_session.php";
+(!$db) ? $conexion = new ConnectionHandler($ruta_raiz) : $conexion = $db;
+$conexion->conn->debug = true;
+$conexion->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+$tprad=12;
+?>
+<html>
+<head>
+
+<title>Migraci&ocuten  de Imagenes</title>
+<link href="../estilos/orfeo.css" rel="stylesheet" type="text/css">
+
+<script>
+function CargarCsv()
+{
+window.open("<?=$ruta_raiz?>/Administracion/cargarcsv.php?&krd=<?=$krd?>&coddepe=<?=$coddepe?>&codusua=<?=$codusua?>&tprad=<?=$tprad?>","Generar CSV","height=150,width=350,scrollbars=yes");
+}
+function BorrarCsv()
+{
+window.open("<?=$ruta_raiz?>/Administracion/borrarcsv.php?&krd=<?=$krd?>&coddepe=<?=$dependencia?>&codusua=<?=$codusua?>","Borrar CSV","height=150,width=350,scrollbars=yes");
+}
+</script>
+</head>
+<body>
+
+
+<body bgcolor="#FFFFFF" >
+<form method="post" action="cargarcsv.php" name="migracion">
+
+<table border=0 width=30% align="center" class="borde_tab" cellspacing="1" cellpadding="0">
+<tr align="center" class="titulos2">
+<td height="15" class="titulos2" colspan="2">MIGRACION DE IMAGENES</td>
+</tr>
+</table>
+
+<table border=0 width=30% align="center" class="borde_tab">
+<tr align="center">
+<td class="titulos5" align="left" nowrap>
+Tipo  de Radicado: </td>
+<td class="titulos5" align="left">
+<input type="text" name="tprad" id="tprad" value="1" size="7">
+
+
+</tr>
+<tr align="center">
+<td class="titulos5" align="left" nowrap>
+Dependencia : </td>
+<td class="titulos5" align="left">
+<input type="text" name="depe" id="depe" value="998" size="7">
+</td>
+</tr>
+
+
+
+</tr>
+<tr align="center">
+<td class="titulos5" align="left" nowrap>A&ntildeo : </td>
+<td class="titulos5" align="left">
+<input type="text" name="anno" id="anno" value="2011" size="7">
+</td>
+</tr>
+</table>
+
+
+
+<br>
+
+
+<TABLE class="borde_tab"  align="center" width="30%">
+<tr class=titulos5><td colspan=10>
+<center>Cargar  Archivo CSV</center>
+</td></tr></TABLE>
+<table class=borde_tab  align="center"  width="30%" cellpadding="0" cellspacing="5">
+  <!--DWLayoutTable-->
+<tr class="grisCCCCCC" align="center">
+	<td align="center" class="listado2" width="48%"><a href="../bodega/tmp/ejemplo.csv" class="vinculos" target='mainFrame'>Ejemplo</a></td>
+ 	<td><input name="CargarCSV" type="submit"  value=" CargarCSV " ></td>
+ 	<td><input name="BorrarCSV" type="button" class="botones_funcion" onClick="BorrarCsv();" value=" BorrarCSV " ></td>
+
+</tr>
+</table>
+
+
+</form>
+
+		
+</body>
+</html>
+<?
+?>
+

@@ -1,0 +1,13 @@
+<?php
+$entidad_largo = "emp";
+$entidad = "emp";
+$entidad_tel = "";
+$entidad_dir = "";
+$entidad_contacto = "";
+$administrador = "";
+$entidad_depsal = 999;  //Guarda el codigo de la dependencia de salida por defecto al radicar dcto de salida
+                        // 0 = Carpeta salida del radicador Redirecciona a la dependencia especificada
+
+$MODULO_RADICACION_DOCS_ANEXOS=1;
+$MODULO_ENVIOS = 2;
+$menuAdicional = 0;

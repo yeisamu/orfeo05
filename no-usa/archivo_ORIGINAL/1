@@ -1,0 +1,234 @@
+<?
+/**
+* Administrador de Transferencias documentales
+* Sistema de gestion Documental ORFEO.
+* Permite traer un listado de los expedientes a los cuales se les debe realizar algun procedimiento por cumplimiento de tiempos por TRD
+* Se verifica por expediente y no por radicado
+* se presume que un expediente tiene una unica Serie-subserie
+*/
+
+    session_start();
+    $ruta_raiz = "..";
+    
+    //valido sesion
+    $dependencia = $_SESSION['dependencia'];
+    if(!$dependencia)  include "$ruta_raiz/rec_session.php";
+
+    include_once("$ruta_raiz/include/db/ConnectionHandler.php");
+    $db = new ConnectionHandler("$ruta_raiz");
+    $db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+    //$db->conn->debug=true;
+
+    include("$ruta_raiz/include/query/archivo/queryAlerta.php");
+
+    $encabezado = session_name()."=".session_id()."&krd=$krd";
+    $linkPagina = "$PHP_SELF?$encabezado&orderTipo=$orderTipo&orderNo=$orderNo";
+    
+    ?>
+    <html height=50,width=150>
+    <head>
+    <title>Alerta Archivo</title>
+    <link rel="stylesheet" href="<?=$ruta_raiz?>/estilos/orfeo.css">
+    <body bgcolor="#FFFFFF">
+    <div id="spiffycalendar" class="text"></div>
+    <link rel="stylesheet" type="text/css" href="<?=$ruta_raiz?>/js/spiffyCal/spiffyCal_v2_1.css">
+    <script language="JavaScript" src="<?=$ruta_raiz?>/js/spiffyCal/spiffyCal_v2_1.js"></script>
+    <script>
+    function confirma()
+    {
+     var r=confirm("Esta seguro de modificar el estado de los expedientes? \n Asegurese de realizar todas las labores necesarias para el cambio de estado: transferir, eliminar, seleccionar, etc. Este procedimiento no realiza ninguna de estas labores, el sistema realizara el cambio de estado para posteriores consultas");
+     if (r==true)
+      {
+       document.modificar.submit();  
+      }
+    }
+    </script>
+    <center>
+    <form name=alerta action="alerta.php?<?=$encabezado?>" method='post'>
+    <table border=0 width 100% cellpadding="0" cellspacing="5" class="borde_tab">
+    <tr><TD class=titulos2 align="center" colspan="5" >ALERTAS DE TRANSFERENCIAS DOCUMENTALES
+    </td></tr>
+    <tr>
+    <td class="titulos5" colspan="2"><label for="dep_sel">DEPENDENCIA</label></td>
+    <td colspan="2">
+    <?
+    $rs1=$db->conn->query($query_dep);
+    print $rs1->GetMenu2('dep_sel',$dep_sel,"0:--- TODAS LAS DEPENDENCIAS ---",false,"","onChange='submit()' id='dep_sel' class=select title='Listado de todas las dependencias existentes'");
+    ?>
+    </td>
+    </tr>
+    <tr>
+    <td class="titulos5" colspan="2"><label for="codserie">SERIE</label></td>
+    <TD colspan="2">
+    <?php
+    $rsD=$db->conn->query($querySerie);
+    print $rsD->GetMenu2("codserie", $codserie, "0:-- TODAS --", false,"","onChange='submit()' class='select' id='codserie' title='Listado de todas las series existentes'" );
+	?>
+    </td>
+    </tr>
+    <tr>
+    <td class="titulos5" colspan="2"><label for="tsub">SUBSERIE</label></td>
+    <td colspan="2">
+    <?
+    //valido si no selecciono una serie para traer las subseries
+    if($codserie!=0) $wheresub=" and m.sgd_srd_codigo = '$codserie' and su.sgd_srd_codigo = '$codserie' title='Listado de todas las subseries existentes, se actualiza al seleccionar una serie'";
+    else $wheresub="";
+    
+    $querySub = $querySub.$wheresub." order by detalle";
+    
+    $rsSub=$db->conn->query($querySub);
+    print $rsSub->GetMenu2("tsub", $tsub, "0:-- TODAS --", false,"","onChange='submit()' class='select' id='tsub'" );
+
+    ?>
+    </td></tr>
+    <tr>
+    <td colspan="2"  align="right"><input type="submit" name="Traer" value="Traer" class="botones_funcion" align="middle" aria-label="Mostrar alertas de transferencias documentales por categorías"></td>
+    <td colspan="2" align="left"><a href='archivo.php?<?=session_name()?>=<?=trim(session_id())?>krd=<?=$krd?>'><input name='Regresar' align="middle" type="button" class="botones_funcion" id="envia22" value="Regresar" aria-label="regresar al menú del módulo de archivo"></a></td>
+    </tr>
+    </table>
+    </form>
+
+    <?
+    if($Traer) {
+    //valido si selecciono informacion en el formulario 
+    $where=" where sb.sgd_sbrd_dispfin!=''";
+    if($dep_sel!=0) $where.= " and sexp.depe_codi=$dep_sel";
+    if($codserie!=0) $where.= " and sexp.sgd_srd_codigo=$codserie";
+    if($tsub!=0) $where.= " and sexp.sgd_sbrd_codigo=$tsub";
+
+    include("$ruta_raiz/include/query/archivo/queryAlerta.php");
+    $queryAlertaw = $queryCont.$where;
+    include("$ruta_raiz/archivo/busca_transferencias.php");
+	?>
+    <form name="modificar" id="modificar" action="./cambiar_estado.php?<?=$encabezado?>&status=<?=$status?>" method="POST">
+    <table border=0 width 100% cellpadding="0" cellspacing="5" class="borde_tab">
+    <tr><TD class=titulos2 align="center" colspan="5" >
+			LOS SIGUIENTES RADICADOS COMENZARON EL TIEMPO EN ARCHIVO CENTRAL :
+			</td>
+    <?
+     
+    /* Verifico si en la logica de busca_transferencias.php
+	el contador de transferencia primaria es >0  */
+    if($primaria>0){
+	//Siguiente estado 1
+	$status=1;
+     /* Busco los expedientes que cumplieron su tiempo en gestion
+	y su disposicion final es conservacion total 1 */
+    $query_ag =  $queryAlerta.$where." and sexp.sgd_sexp_estado = 0 and sb.sgd_sbrd_dispfin='1' and ".$redondeo_ag." < 0"; 
+    $rs_ag=$db->conn->query($query_ag);
+
+    if (!$rs_ag->EOF)  {
+		$pager = new ADODB_Pager($db,$query_ag,'adodb', true,$orderNo,$orderTipo);
+		$pager->checkAll = false;
+		$pager->checkTitulo = false;
+		$pager->toRefLinks = $linkPagina;
+		$pager->toRefVars = $encabezado;
+		$pager->Render($rows_per_page=20,$linkPagina,$checkbox=chkAnulados);
+	    }
+    }else {
+	?>
+    	<tr><td class=leidos2 align="center">No se encontraron Radicados Proximos a pasar a Archivo Central</td></tr></table>
+	<?
+    }//Fin trasnferir 1
+    ?>
+    <table border=0 width 100% cellpadding="0" cellspacing="5" class="borde_tab">
+    <tr><TD class=titulos2 align="center" colspan="5" >
+			LOS SIGUIENTES RADICADOS COMENZARON EL TIEMPO EN ARCHIVO HISTORICO :
+			</td></tr>
+    <?
+     /* Verifico si en la logica de busca_transferencias.php
+	el contador de transferencia secundaria es >0  */
+    if($secundaria>0){
+    ?>
+    <!--<td><input type=button value=Transferir name=modificar align=bottom class=botones id=modificar onclick="confirma()"></td> -->
+    <?    
+	//Siguiente estado 2
+	$status=2;
+     /* Busco los expedientes que cumplieron su tiempo en central 
+	y su disposicion final es conservacion total 1 */
+     $query_ac =  $queryAlerta.$where." and sexp.sgd_sexp_estado = 1 and sb.sgd_sbrd_dispfin='1' and ".$redondeo_ag." < 0"; 
+    $rs_ac=$db->conn->query($query_ac);
+
+    if (!$rs_ac->EOF)  {
+		$pager = new ADODB_Pager($db,$query_ac,'adodb', true,$orderNo,$orderTipo);
+		$pager->checkAll = false;
+		$pager->checkTitulo = false;
+		$pager->toRefLinks = $linkPagina;
+		$pager->toRefVars = $encabezado;
+		$pager->Render($rows_per_page=20,$linkPagina,$checkbox=chkAnulados);
+	}
+    }else{
+	?>
+    	<td class=leidos2 align="center">No se encontraron Radicados Proximos a pasar a Archivo Historico</td></table>
+	<?
+	} //fin Transferir 2
+    ?>
+    <table border=0 width 100% cellpadding="0" cellspacing="5" class="borde_tab">
+    <tr><TD class=titulos2 align="center" colspan="5" >
+			LOS SIGUIENTES EXPEDIENTES DEBEN SER ELIMINADOS :
+			</td>
+    <?
+     /* Verifico si en la logica de busca_transferencias.php
+	el contador de eliminacion es >0  */
+    if($eliminar>0){
+	//Siguiente estado 3
+	$status=3;
+    /* Busco los expedientes que cumplieron su tiempo en gestion
+	y su disposicion final es eliminacin 2 */
+    ?>
+    <td><input type=button value=Eliminar name=modificar align=bottom class=botones id=modificar onclick="confirma()"></td></tr> 
+    <?    
+    $query_el =  $queryAlerta.$where." and sexp.sgd_sexp_estado = 0 and sb.sgd_sbrd_dispfin='2' and ".$redondeo_ag." < 0";  
+    $rs_el=$db->conn->query($query_el);
+    if (!$rs_el->EOF)  {
+		$pager = new ADODB_Pager($db,$query_el,'adodb', true,$orderNo,$orderTipo);
+		$pager->checkAll = false;
+		$pager->checkTitulo = false;
+		$pager->toRefLinks = $linkPagina;
+		$pager->toRefVars = $encabezado;
+		$pager->Render($rows_per_page=20,$linkPagina,$checkbox=chkAnulados);
+	}
+    }else{
+	?>
+    	<tr><td class=leidos2 align="center">No se encontraron Radicados Proximos a eliminar<td> </tr></table>
+	<?
+	} //Fin Eliminar
+    ?>
+    <table border=0 width 100% cellpadding="0" cellspacing="5" class="borde_tab">
+    <tr><TD class=titulos2 align="center" colspan="5" >
+			LOS SIGUIENTES EXPEDIENTES DEBEN SER SELECCIONADOS :
+			</td></tr>
+    <?
+     /* Verifico si en la logica de busca_transferencias.php
+	el contador de seleccion es >0  */
+    if($seleccion>0){
+	//Siguiente estado 4
+	$status=4;
+    ?>
+   <!-- <td><input type=button value=Seleccionar name=modificar align=bottom class=botones id=modificar onclick="confirma()"></td> -->
+    <?    
+    /* Busco los expedientes que cumplieron su tiempo en gestion
+	y su disposicion final es seleccion 4 */
+     $query_sel =  $queryAlerta.$where." and sexp.sgd_sexp_estado = 0 and sb.sgd_sbrd_dispfin='4' and ".$redondeo_ag." < 0";
+    $rs_sel=$db->conn->query($query_sel);
+
+    if (!$rs_sel->EOF)  {
+		$pager = new ADODB_Pager($db,$query_sel,'adodb', true,$orderNo,$orderTipo);
+		$pager->checkAll = false;
+		$pager->checkTitulo = false;
+		$pager->toRefLinks = $linkPagina;
+		$pager->toRefVars = $encabezado;
+		$pager->Render($rows_per_page=20,$linkPagina,$checkbox=chkAnulados);
+
+    	}
+     }else{
+	?>
+    	<tr><td class=leidos2 align="center">No se encontraron Radicados Proximos a seleccionar </td></tr> </table>
+	<?
+    	} //Fin seleccion
+    } //Fin Traer 
+    ?>
+    </form>
+    </center>
+    </body>
+    </html>

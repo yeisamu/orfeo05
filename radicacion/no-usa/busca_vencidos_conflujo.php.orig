@@ -1,0 +1,119 @@
+<?php
+
+//session_start();
+error_reporting(7);
+$ruta_raiz = "/var/www/html/orfeo-3.8.0p";
+//$ruta_raiz = "/var/www/html/pruebas";
+define('ADODB_ASSOC_CASE', 0);
+
+include_once "/var/www/html/orfeo-3.8.0p/include/db/ConnectionHandler.php";
+//include_once "/var/www/html/pruebas/include/db/ConnectionHandler.php";
+$db = new ConnectionHandler("$ruta_raiz");
+
+$db->conn->debug=true;
+$fechahoy=date("Y-m-d"); 
+$sqlFecha = $db->conn->SQLDate("Y-m-d","RADI_FECH_RADI");
+$order = " 1";
+$nombre='ADMINISTRADOR';
+$apellido='SGD ORFEO';
+$dependencia="b.radi_depe_actu";
+$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+
+//Busco los expedientes que tienen flujo
+echo "Alertas para los documentos que tienen flujo";
+echo "<br>";
+$isql_exp='SELECT se.SGD_FEXP_CODIGO, se.SGD_PEXP_CODIGO, fe.SGD_FEXP_DESCRIP as ETAPA,
+                e.SGD_EXP_NUMERO, r.RADI_NUME_RADI as CHK_CHKANULAR, dir.SGD_DIR_NOMREMDES AS "Remitente/Destinatario",
+                r.RADI_USUA_ACTU AS HID_USUA, r.RADI_DEPE_ACTU AS HID_DEPE,
+		round(((radi_fech_radi+(fe.SGD_FEXP_TERMINOS * 7/5))-sysdate)) as "HID_DIAS_R",
+		tp.SGD_TPR_DESCRIP as "Tipo_Documento", r. RA_ASUN      AS HID_ASUN
+                from SGD_TPR_TPDCUMENTO tp, SGD_DIR_DRECCIONES dir, 
+			RADICADO r LEFT OUTER JOIN SGD_EXP_EXPEDIENTE e
+                         ON r.RADI_NUME_RADI=e.RADI_NUME_RADI
+                join  SGD_SEXP_SECEXPEDIENTES se ON  SE.SGD_EXP_NUMERO=E.SGD_EXP_NUMERO 
+			AND SE.SGD_PEXP_CODIGO!=0, SGD_FEXP_FLUJOEXPEDIENTES fe
+	         WHERE  SE.SGD_FEXP_CODIGO=FE.SGD_FEXP_CODIGO
+                 	AND SE.SGD_PEXP_CODIGO=FE.SGD_PEXP_CODIGO
+			AND r.RADI_NUME_RADI=dir.RADI_NUME_RADI
+			AND r.tdoc_codi=tp.sgd_tpr_codigo
+		ORDER BY HID_DEPE';
+
+$rs=$db->conn->query($isql_exp);
+
+while(!$rs->EOF){
+	$usua_codi=$rs->fields["HID_USUA"];
+	$depe_codi=$rs->fields["HID_DEPE"];
+	$radi_nume=$rs->fields["CHK_CHKANULAR"];
+	$asunto=$rs->fields["HID_ASUN"];
+	$diasr=$rs->fields["HID_DIAS_R"];
+	$remitente=$rs->fields["Remitente/Destinatario"];
+	$tipodoc=$rs->fields["Tipo_Documento"];
+	$etapa=$rs->fields["ETAPA"];
+	
+	//if($diasr<=1){
+	if($diasr<=1 and $depe_codi!='999'){
+	echo "<br>";
+        echo "Radicado $radi_nume fecha $fecha_rad Dias restantes $diasr Tipo Documental $tipodoc <br> Etapa $etapa";
+	echo "<br>";
+
+	$sql_mail="SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=$usua_codi
+			AND DEPE_CODI=$depe_codi";
+	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+	$rs_mail=$db->conn->query($sql_mail);
+	$mail_usu=$rs_mail->fields["USUA_EMAIL"];
+	$fecha=date("F j, Y H:i:s");
+//        echo "mail usu $mail_usu <br>";
+	
+		if($usua_codi!=1) {
+			$sql_mail="SELECT USUA_EMAIL 
+				FROM USUARIO 
+				WHERE USUA_CODI=1
+				AND DEPE_CODI=$depe_codi";
+			$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+			$rs_mail=$db->conn->query($sql_mail);
+			$mail_jefe=$rs_mail->fields["USUA_EMAIL"];
+		        //echo "mail jefe $mail_jefe <br>";
+		}
+	//Cuerpo del email
+        $subject="Tiene un documento vencido en Orfeo";
+        $cuerpo="
+        <html>
+        <head>
+        <title>CORRESPONDENCIA EN ORFEO</title>
+        </head>
+        <body><p>
+        Bogota D.C. ".$fecha." <br>
+        <br></br>
+        Tiene un documento en flujo pendiente que esta proximo a vencerse en el Sistema de Gestion Documental. Para verlo, ingrese a su Orfeo y revise el radicado  No  ".$verrad." ".$radi_nume."  enviado por  ".$remitente." .  <br>
+        <br>Asunto:  ".$asunto."</br>
+        <br>Tipo de documento:  ".$tipodoc."</br>
+        <br>Etapa:  ".$etapa."</br>
+        <br></br>
+        <br>Cordial saludo, </br>
+        <br>Sistema de Gestion Documental
+        </p>
+        </body>
+        </html>
+        ";
+        //$headers  = "MIME-Version: 1.0\r\n";
+        $headers  = "MIME-Version: 1.0\n";
+        //$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1\n";
+        //$headers .= "Content-Transfer-Encoding: base64\r\n";
+        //direccion del remitente
+        //$headers .= "From: Administracion documental <correspondencia@emsa-esp.com.co>\r\n";
+        $headers .= "From: Orfeo  aruba <aruba@...>\n";
+//        if ($mail_jefe) $headers .= "CC: $mail_jefe\n";
+	$ok=mail($mail_usu,$subject,$cuerpo,$headers);
+        if ($ok) echo("Se ha enviado una notificacion a $mail_usu <br>");
+        else echo ("No envio correo");
+//	if ($mail_jefe and $ok) echo("Se ha enviado una notificacion al jefe $mail_jefe <br>");
+	echo "<br>";
+
+} 	
+$rs->MoveNext();
+} 	
+
+?>

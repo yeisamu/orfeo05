@@ -1,0 +1,13 @@
+                                Instalación Orfeo > 4.2  SkinaTech
+
+Dependencias
+~~~~~~~~~~~~
+
+PHP == 5.3  .. Y nada mas 
+
+PostgreSQL:       php5-pgsql
+MSSQL Server:     php5-mssql
+Oracle :          php5-oci8
+
+
+

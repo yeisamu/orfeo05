@@ -1,0 +1,62 @@
+Alertas para los documentos que no tienen flujo 2012-12-11<br>-----
+(postgres7): select                 TO_CHAR(RADI_FECH_RADI, 'YYYY-MM-DD') as "DAT_Fecha Radicado"
+                                , b.RA_ASUN  as "HID_ASUN", d.SGD_DIR_NOMREMDES  as "Remitente/Destinatario"
+                                , c.SGD_TPR_DESCRIP as "Tipo_Documento"
+                                , date_part('days',  radi_fech_radi-CURRENT_TIMESTAMP)+floor(dt.dias_termino * 7/5)+(select count(*) from sgd_noh_nohabiles where NOH_FECHA between radi_fech_radi and CURRENT_TIMESTAMP) as "HID_DIAS_R"
+                                , b.RADI_USUA_ACTU as "HID_USUA"
+                                , b.RADI_DEPE_ACTU as "HID_DEPE"
+                                , cast(b.RADI_NUME_RADI as varchar(15)) as "CHK_CHKANULAR"
+	from
+                 radicado b left outer join SGD_TPR_TPDCUMENTO c on b.tdoc_codi=c.sgd_tpr_codigo
+        		    left outer join SGD_DIR_DRECCIONES d on b.radi_nume_radi=d.radi_nume_radi
+		            left outer join SGD_DT_RADICADO dt on b.radi_nume_radi=dt.radi_nume_radi
+         where
+                b.radi_nume_radi is not null
+                and b.radi_depe_actu=b.radi_depe_actu
+                
+                
+          order by  b.RADI_DEPE_ACTU 
+-----
+<br>Radicado 20129980002882 fecha 2012-11-20 Dias restantes -21 Tipo Documental No definido <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br><br>Radicado 20129980005381 fecha 2012-11-26 Dias restantes -15 Tipo Documental No definido <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br><br>Radicado 20129980005381 fecha 2012-11-26 Dias restantes -15 Tipo Documental No definido <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br><br>Radicado 20129980002882 fecha 2012-11-20 Dias restantes -21 Tipo Documental No definido <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br><br>Radicado 20129980001152 fecha 2012-11-09 Dias restantes -20 Tipo Documental Procedimiento Administrativo <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br><br>Radicado 20129980001051 fecha 2012-11-08 Dias restantes -16 Tipo Documental PQRS Peticiones, Quejas y Reclamos del Servicio <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br><br>Radicado 20125010000012 fecha 2012-11-06 Dias restantes -34 Tipo Documental Recurso de Reposición-Apelación-Queja <br>-----
+(postgres7): SELECT USUA_EMAIL 
+		FROM USUARIO 
+		WHERE USUA_CODI=1
+			AND DEPE_CODI=998
+-----
+mail usu soporte@skinatech.com <br>Se ha enviado una notificacion a soporte@skinatech.com <br><br>

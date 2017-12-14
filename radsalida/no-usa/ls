@@ -1,0 +1,168 @@
+<?php
+$empo_encabeza='
+<table style="" left;="" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="5" style="" top;="" width:="" 127px;=""
+font-family:="" arial;=""><img src="$encaenti" alt="logo_skina"
+height="50%"><br>
+</td>
+<td colspan="10" rowspan="1" style="" top;="" text-align:=""
+center;="" font-family:="" arial;=""><small>SKINA TECHNOLOGIES LTDA</small><br>
+</td>
+</tr>
+<tr style="" arial;="" align="center">
+<td colspan="10" rowspan="1" style="" top;=""><small>NIT
+891200686-3</small><br>
+</td>
+</tr>
+<tr style="" arial;="">
+<td colspan="10" rowspan="1" style="" top;=""><small>NOMBRE DEL
+FORMATO: CONTROL ENTREGA DE CORRESPONDENCIA</small><br>
+</td>
+</tr>
+<tr>
+<td colspan="5" rowspan="2" style="" middle;="" text-align:=""
+center;="" font-family:="" arial;=""><small>PROCESO DE GESTION DE
+INFORMACION Y COMUNICACION<br>
+</small></td>
+<td style="" top;="" font-family:="" arial;="" text-align:=""
+center;=""><small>VIGENCIA<br>
+</small></td>
+<td style="" top;="" font-family:="" arial;="" text-align:=""
+center;=""><small>VERSION<br>
+</small></td>
+<td style="" top;="" font-family:="" arial;="" text-align:=""
+center;=""><small>CODIGO<br>
+</small></td>
+<td colspan="2" rowspan="2" style="" top;="" font-family:=""
+arial;="" text-align:="" center;=""><small>CONSECUTIVO<br>
+</small></td>
+</tr>
+<tr>
+<td style="" top;="" font-family:="" arial;=""><small><br>
+</small></td>
+<td style="" top;="" font-family:="" arial;=""><small><br>
+</small></td>
+<td style="" top;="" font-family:="" arial;=""><small><br>
+</small></td>
+</tr>
+<tr>
+<td colspan="6" rowspan="2" style="" top;="" width:="" 127px;=""
+font-family:="" arial;=""><small><br>
+</small></td>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;="" text-align:="" center;=""><small>USUARIO
+RESPONSABLE<br>
+</small></td>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;="" text-align:="" center;=""><small>MEDIO
+DE ENVIO<br>
+</small></td>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;="" text-align:="" center;=""><small>FIRMA
+DEL MENSAJERO<br>
+</small></td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;=""><small><br>
+</small></td>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;=""><small><br>
+</small></td>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;=""><small><br>
+</small></td>
+</tr>
+<tr>
+<td colspan="3" rowspan="1" style="" top;="">PLANILLA
+No:<br>
+</td>
+<td colspan="9" rowspan="1" style="" top;="">$planilla<br>
+</td>
+</tr>
+<tr>
+<td colspan="3" rowspan="1" style="" top;="">Tipo de
+envio:<br>
+</td>
+<td colspan="9" rowspan="1" style="" top;="">$tip_envio<br>
+</td>
+</tr>
+<tr>
+<td colspan="3" rowspan="1" style="" top;="">Dependencia:<br>
+</td>
+<td colspan="9" rowspan="1" style="" top;="">$dep<br>
+</td>
+</tr>
+<tr>
+<td colspan="3" rowspan="1" style="" top;="">Usuario
+responsable:<br>
+</td>
+<td colspan="9" rowspan="1" style="" top;="">$user<br>
+</td>
+</tr>
+<tr>
+<td colspan="3" rowspan="1" style="" top;="">Fecha
+generado:<br>
+</td>
+<td colspan="9" rowspan="1" style="" top;="">$fecha<br>
+</td>
+</tr>
+<tr>
+<td colspan="3" rowspan="1" style="" top;="">No de
+registros:<br>
+</td>
+<td colspan="9" rowspan="1" style="" top;="">$no_reg<br>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="2" style="" middle;="" width:="" 32px;=""
+text-align:="" center;="" font-family:="" arial;=""><small>No.<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+105px;="" text-align:="" center;="" font-family:="" arial;=""><small>RADICADO<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+105px;="" text-align:="" center;="" font-family:="" arial;=""><small>RADICADO
+PADRE<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:="" 85px;=""
+text-align:="" center;="" font-family:="" arial;=""><small>FECHA Y
+HORA DE RADICADO<br>
+</small></td>
+<td colspan="2" rowspan="1" style="" top;="" font-family:=""
+arial;="" text-align:="" center;=""><small>DESTINATARIO<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+143px;="" text-align:="" center;="" font-family:="" arial;=""><small>ASUNTO<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+113px;="" text-align:="" center;="" font-family:="" arial;=""><small>REMITENTE<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+113px;="" text-align:="" center;="" font-family:="" arial;=""><small>RECIBIDO
+POR o NUMERO DE GUIA<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+113px;="" text-align:="" center;="" font-family:="" arial;=""><small>FECHA
+Y HORA DE RECIBIDO<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+113px;="" text-align:="" center;="" font-family:="" arial;=""><small>OBSERVACIONES<br>
+</small></td>
+<td colspan="1" rowspan="2" style="" middle;="" width:=""
+113px;="" text-align:="" center;="" font-family:="" arial;=""><small>FIRMA</small><br>
+</td>
+</tr>
+<tr>
+<td style="" middle;="" width:="" 113px;="" text-align:=""
+center;=""><small><span style="" arial;="">ORIGINAL</span><br>
+</small></td>
+<td style="" middle;="" width:="" 113px;="" text-align:=""
+center;=""><small><span style="" arial;="">COPIA</span><br>
+</small></td>
+</tr>
+</tbody>
+</table>';
+?>

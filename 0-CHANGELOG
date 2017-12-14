@@ -1,0 +1,75 @@
+
+--------------------------------------------------------------------------------
+Cambios críticos de Orfeo5 respecto a versiones anteriores.
+--------------------------------------------------------------------------------
+
+- Las versiones anteriores incluyen 3 frames (cabezote, menú de acciones y
+el cuerpo del sistema) que eran cargados de forma independiente, el menú de
+acciones ejecuta las funciones en el frame "cuerpo del sistema":
+
+- Es archivo principal desde el que se llaman las vistas es index_frames.php
+
+- El cabezote se integro a index_frames.php (ya no se invoca desde un frame 
+externo)
+
+- El menú de acciones (antiguo menú izquierdo) se sigue invocando en un frame,
+pero este se encuentra oculto, index_frame.php obtiene todo su contenido y 
+crea el menú de opciones desplegables superior con cada elemento obtenido 
+de este frame oculto (Se cargan opciones y carpetas personales según permisos)
+
+- El menú desplegable inferior se construye a partir del menú de acciones
+original que aparecía en los listados de radicados y las vistas individuales 
+de estos, la diferencia es que según los permisos se activan o no variables 
+en javascript que le indican a index_frame.php que elementos debe mostrar, antes
+según permisos php dibujaba o no los botones de acciones sobre los radicados. 
+
+- El menú desplegable inferior esta oculto por defecto, se hace visible 
+colocando la variable en javascript "var visible = true;", cuando se cambia 
+de vista o se ingresa al sistema index_frame.php verifica con esta variable si
+el menú debe ser mostrado. 
+
+- La barra de búsqueda esta oculta por defecto, el botón buscar en el 
+cabezote actualiza el estilo de los elementos con el id "searchTable" para que
+sean visibles.
+
+- En todas las vistas se incluyeron las hojas de estilos usando la variable
+"ruta_raiz" que tiene cada archivo y la variable se sesión "ESTILOS_PATH_ORFEO",
+
+- El archivo de configuración config.php se agregaron las variables: 
+
+imagenes2: directorio de imágenes nuevas para orfeo 5
+
+logoSuperiorOrfeo: booleano para activar o desactivar el logo de la entidad
+
+ESTILOS_PATH2: Directorio de los nuevos estilos, usado para ubicar librería 
+bootstrap.
+
+ESTILOS_PATH_ORFEO: Ruta completa de la hoja de estilos a usar(permite cambiar
+el nombre de la hoja de estilos a usar, antes estaba en código limitado a que 
+el nombre de la hoja css era siempre orfeo.css).
+
+- Se crearon nuevas variables para las rutas y no se usaron las anteriores para 
+poder editar el sistema cargando css viejos y nuevos al mismo tiempo, facilitando 
+la actualización de lo que era necesario, (se conservaron algunos estilos). 
+
+- El directorio estilos, tiene una nueva carpeta llamada orfeo50, aquí se ubica
+la librería bootstrap y hojas css de login, logout, cambio de contraseña, y cabezote.
+Se independizaron por que pueden generar problemas con las rutas cargadas por sesión.
+
+- La hoja de estilos principal continua en estilos/orfeo.css, tiene los estilos nuevos
+y los que se consideraron conservar, no todos se usan y en algunos casos fue necesario
+sobre escribir estilos para adaptar casos específicos.
+
+- En el directorio estilos se agregaron recursos que usa botstrap (fonts y js)
+
+- Para que los tooltips de bootstrap funcionen, es necesario jquery, los js de
+bootstrap e inicializar esta función al final del archivo, (ejemplo simple: 
+orfeo5/envios/cuerpoEnvioNormal.php) 
+
+- Se corrigieron problemas con las rutas de la librería usada para generar el
+menú de fechas (spiffyCal_v2_1.js), si la vista desde la que se llama librería
+no esta en el directorio raíz, antes de dibujar los calendarios, debe establecer
+la ruta raíz de esta agregando en código javascript la funcion setRutaRaiz
+ejemplo :  "setRutaRaiz(..);" , "setRutaRaiz(../..);" nótese que no lleva barra inclinada
+al final. 
+

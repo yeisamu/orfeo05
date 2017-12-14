@@ -1,0 +1,273 @@
+*{
+    padding: 0;
+    margin: 0;
+    /*    text-decoration: none;*/
+}
+.row {
+    width: 100.9%;
+}
+.botline{
+    border-bottom:1px solid #fff;
+}
+.border-b{
+    border-radius:10px 0px 0 10px;
+}
+ /*dimensiones para logo orfeo*/
+.orf{
+    margin-top: 20px;
+    margin-left: 58px;
+    width: 168px;
+}
+/*.orf {
+    margin-top: 4px;
+    margin-left: 58px;
+    width: 99px;
+}*/
+
+.orf2{
+    margin-left: 11px;
+    width: 229px;
+    margin-top: 35px;;
+}
+
+header{
+    z-index: 1000000;
+    position: absolute;
+    width: 100%;
+    background: #D33F4B;
+    /*    background: #D52223;*/
+    height: 119px;
+}
+
+body, html {
+    /*        overflow: hidden;*/
+}
+
+#header {
+    /*  position: absolute;
+      margin-left:55%;*/
+    margin-top: -11px;
+    width: 750px;
+    float: right;
+}
+#header nav{
+    margin-left: 1%;
+    float: right;
+}
+div img{
+    display: flex;
+    float: left;
+    width: 51%;
+}
+
+#imgtop{
+    padding: absolute;
+    width:100%;
+    /*  height: 25vh;*/
+}
+#imgtop img{
+    width: 340px;
+}
+#menu{
+    margin-left: -12px;
+    /*  width: 112%;*/
+}
+#menu ul{
+    margin-top: 45px;
+    width: 510px;
+    /*  display: block;*/
+    float: right;
+}
+#menu ul li{
+    text-decoration:none;
+    margin-left: -1%;
+    padding: 2%;
+    display: inline-block;
+}
+#menu ul li span{
+    text-decoration:none;
+    font-size: 200%;
+    text-align: center;
+    margin-left:15%;
+    transition: all .4s;
+    color: #fff;
+}
+#menu ul li  p{
+    text-decoration:none;
+    color: #fff;
+    text-align: center;
+}
+#menu ul li a p:hover{
+    text-decoration: none;
+}
+#menu ul li span:hover{
+    color: #000;
+}
+
+/*Se duplica estilos para manejar elementos del menu superor por id unicos */
+#submenu , #submenu2, #submenu3{
+    padding: 1%;
+    background-color: #D33F4B;
+    width: 600%;
+    border-radius:10px;
+}
+/*submenu carpetas personales*/
+#submenusub{
+    padding: 4%;
+    background-color: #EF5663;
+    width: 10%;
+    border-radius:10px;
+}
+
+#submenu li a , #submenu2 li a, #submenu3 li a{
+    margin-left: 12px;
+    width: 100%;
+    overflow: hidden;
+    transition: all .4s;
+    padding:1%;
+    font-size: 14px;
+}
+#submenu li a:hover , #submenu2 li a:hover, #submenu3 li a:hover{
+    width: 96%;
+    overflow: hidden;
+    background-color: #fff;
+    color:  #D33F4B;
+    transition: all .4s;
+}
+
+ul, ol {
+    list-style:none;
+}
+.nav {
+    width:100%; 
+    margin:0 auto; 
+}
+.nav > li {
+    background: #1C4056;
+    float:left;
+    /*    Alto barras menu superior*/
+    height: 38px;
+}
+.nav li a {
+    color:#fff;
+    text-decoration:none;
+    /*    padding:10px 12px;*/
+    width: 100%;
+    display:block;
+}
+.nav li a:hover {
+    width: 150%;
+    background-color: #ffffff;
+    color:  #D33F4B;
+    transition: all .4s;
+}
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:100%;
+}
+.nav li:hover > ul {
+    z-index: 100000;
+    display:block;
+}
+.radius-le{
+    border-radius: 0px 10px 10px 0px;
+    border-right:1px solid #fff;
+}
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+/* menu bot */
+.bot{
+    background:#183D57;
+    border-radius: 40px 40px 0 0;
+    z-index: 100000;
+    position: fixed;
+    transition: all .6s;
+    bottom: -37px;
+    margin-left: 30%;
+    width: 520px;
+}
+.bot:hover{
+    transition: all .6s;
+    /*margin-top: -119vh;*/
+    bottom: -1px;
+}
+
+.upBot{
+    transition: all .6s;
+    /*margin-top: -119vh;*/
+    bottom: -1px;
+}
+
+.bot nav ul{
+    margin-left: 7%;
+    width: 100%;
+    display: block;
+}
+.bot nav ul li{
+    padding: 1.5%;
+    margin-left: 2%;
+    display: inline-block;
+    float: left;
+}
+.bot nav ul li span{
+    font-size: 140%;
+    color: #fff;
+    transition: all .6s;
+    padding: 1%;
+}
+.bot nav ul li:hover , .bot nav ul li span:hover{
+    color: #000;
+    /*    font-size: 143%;*/
+    transition: all .6s;
+}
+#cerrar{
+    margin-top: 1%;
+    margin-left: 95%;
+    color: #fff;
+    font-size: 140%;
+    position: absolute;
+}
+
+.iframeclass{
+    margin-top: 14px;
+    width: 100%;
+    height: 70%;
+}
+
+@media screen and (min-height:450px) {
+    .iframeclass{
+        height: 62%;
+    }
+}
+
+@media screen and (min-height:600px) {
+    .iframeclass{
+        height: 72%;
+    }
+}
+
+@media screen and (min-height:620px) {
+    .iframeclass{
+        height: 73%;
+    }
+}
+
+@media screen and (min-height:700px) {
+    .iframeclass{
+        height: 77%;
+    }
+}
+
+@media screen and (min-height:800px) {
+    .iframeclass{
+        height: 80%;
+    }
+}
+

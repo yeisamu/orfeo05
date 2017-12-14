@@ -1,0 +1,174 @@
+/*css para centrar elementos*/
+.center{
+    margin : 0 20%;
+}
+/*Botones de menu principal*/
+.vinculo_dig {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px 22px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.vinculo_dig:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.vinculo_dig:active {
+	position:relative;
+	top:1px;
+}
+/*Fin Botones menu principal*/
+
+/*Css Boton enviar formulario */
+.btn_aceptar_form {
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #ff9900;
+  padding: 2px 4px 2px 5px;
+  text-decoration: none;
+}
+
+.btn_aceptar_form:hover {
+  background: #1c990e;
+  text-decoration: none;
+}
+/*Fin css Boton enviar formulario*/
+
+/*Css Boton cancelar formulario */
+.btn_cancelar_form {
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #ff9900;
+  padding: 2px 4px 2px 5px;
+  text-decoration: none;
+}
+
+.btn_cancelar_form:hover {
+  background: #eb1111;
+  text-decoration: none;
+}
+/*Fin css Boton cancelar formulario */
+
+/*Css para el label*/
+.labelcde {
+     border: medium none;
+    color: #222;
+    display: table;
+    font-size: 95%;
+    font-weight: bold;
+    line-height: 200%;
+    padding: 0 0 1px;
+}
+
+#turnkey-credit {
+    display: none !important;
+}
+
+/*Css para el label*/
+.div_sticker {
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	/*border: 0.01cm solid #BDBDBD;*/
+	display:inline-block;
+	/*margin-top: 1mm;*/
+	margin-bottom: 1mm;
+	margin-left: 15mm;
+	margin-right: 1mm;
+	font-size: 7px;
+        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+}
+
+.div_sticker:hover {
+	background: #A9BCF5;
+	text-decoration: none;
+}
+
+#div_grid {
+	width: 21.4cm;
+    	min-height: 28cm;
+    	margin: 0 auto;
+   	border-radius: 5px;
+    	background: white;
+        margin-top: 6mm;
+}
+.left_col {
+   	float:left;
+	display:inline-block;
+	width: 9.25cm;
+	height: 2.4cm;
+	margin-right: 0.1mm;
+}
+.right_col {
+   	float:left;
+	display:inline-block;
+   	width: 9.25cm;
+   	height: 2.4cm;
+	margin-left: 3mm;
+}
+
+.div_img {
+	text-align: left;
+	float: left;
+	position: relative;
+  	top: 20%;
+ 	transform: translateY(-20%);
+	height: 70px
+}
+
+@page {
+    size: "A4";
+    margin: 0;
+}
+
+@media print {
+  html, #grid, page[size="A4"] {
+    width: 21cm;
+    height: 28cm;
+    height: 99.99%;
+  }
+page[size="A4"]{
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: avoid;
+    }
+}

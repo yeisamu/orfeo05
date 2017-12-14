@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Autocomplete - Remote with caching</title>
+	<link rel="stylesheet" href="../../themes/base/jquery.ui.all.css">
+	<script src="../../jquery-1.7.1.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.position.js"></script>
+	<script src="../../ui/jquery.ui.autocomplete.js"></script>
+	<link rel="stylesheet" href="../demos.css">
+	<style>
+	.ui-autocomplete-loading { background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat; }
+	</style>
+	<script>
+	$(function() {
+		var cache = {},
+			lastXhr;
+		$( "#birds" ).autocomplete({
+			minLength: 3,
+                        select: seleccion,
+			source: function( request, response ) {
+				var term = request.term;
+				if ( term in cache ) {
+					response( cache[ term ] );
+					return;
+				}
+
+				lastXhr = $.getJSON( "search.php", request, function( data, status, xhr ) {
+					cache[ term ] = data;
+					if ( xhr === lastXhr ) {
+						response( data );
+					}
+				});
+			}
+		});
+	});
+
+
+function seleccion(event, ui)  
+{  
+    // recupera la informacion del producto seleccionado  
+    var producto = ui.item.value;  
+    var precio = 10;  
+    var importe = 11;  
+  
+    // actualizamos los datos en el formulario  
+    $("#lblPrecio").text(producto);  
+    // (intenta comentando este codigo para ver a que me refiero)  
+    $("#birds").val(producto.descripcion);  
+     event.preventDefault();  
+}  
+	</script>
+</head>
+<body>
+<table>  
+        <tr>  
+            <th>Cantidad</th>  
+            <th>Producto</th>  
+            <th>Precio</th>  
+            <th>Importe</th>  
+        </tr>  
+        <tr>  
+            <td><input id="txtCantidad" type="text" value="1" /></td>  
+            <td><input id="txtProducto" type="text" /></td>  
+            <td><label id="lblPrecio">0.00</label></td>  
+            <td><label id="lblImporte">0.00</label></td>  
+        </tr>  
+    </table>  
+<div class="demo">
+
+<div class="ui-widget">
+	<label for="birds">Destinatario: </label>
+	<input id="birds" />
+</div>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description">
+<p>The Autocomplete widgets provides suggestions while you type into the field. Here the suggestions are bird names, displayed when at least two characters are entered into the field.</p>
+<p>Similar to the remote datasource demo, though this adds some local caching to improve performance. The cache here saves just one query, and could be extended to cache multiple values, one for each term.</p>
+</div><!-- End demo-description -->
+
+</body>
+</html>

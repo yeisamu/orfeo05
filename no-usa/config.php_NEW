@@ -1,0 +1,44 @@
+<?php
+include_once('instalacion/configHelperOrfeo.php');
+$algo = new configHelperOrfeo("instalacion/configJson.json");
+$aux=$algo->readJson();
+
+$servidor = "localhost";
+$servicio = $aux['basedatos']; //Nombre de la base de datos
+$usuario = $aux['usuario']; //Usuario de la base de datos
+$contrasena= $aux['password']; //contraseña de la base de datos
+$db = $servicio; //Nombre de la base de datos
+$driver = $aux['TipoMotor']; //Motor de base de datos
+$ambiente = $aux['ambiente']; //Ambiente en el que se encuentra es decir produccion(orfeo) o pruebas(pruebas)
+$servProcDocs = "127.0.0.1:8000";
+$entidad= $aux['empresa']; //Razon social de la empresa
+$entidad_largo= $entidad; //Variable usada generalmente para los t�tulos en informes.
+$nit_entidad = $aux['nit']; //Nit de la empresa
+$entidad_tel =  $aux['telefono']; //Numeros de contactos
+$entidad_contacto = $aux['web']; //Direccion de la paguina web
+$entidad_dir = $aux['direccion']; //Direccion de la empresa
+	
+$ADODB_PATH = "/var/www/".$aux['ambiente']."/adodb"; //Ruta de donde se encuentra la clase encargada de la conexion
+$ADODB_CACHE_DIR = "/tmp"; //Carpeta temporal en la que se guardan temporales del sistema
+$MODULO_RADICACION_DOCS_ANEXOS=1; 
+$MODULO_ENVIOS = 2;
+	
+$PEAR_PATH="/var/www/".$aux['ambiente']."/pear/"; //Ruta de la clase que se referencia la configuracion de correo electronico
+$servidor_mail_imap = $aux['imap']; //Direccion o IP del servidor de IMAP
+$protocolo_mail = "imaps"; //imap|pop3 Metodo de autenticacion
+$puerto_mail_imap = $aux['puertoImap']; //Puerto para la recepcion de mensajes (Radicacion E-mail)
+$servidor_mail_smtp = $aux['smtp']; //Direccion o IP del servidor de SMTP
+$puerto_mail_smtp = $aux['puertoSmtp']; //Se587n servidor defecto 143|110 Puerto para el envio de correos electronicos(Notificaciones)
+$cuenta_mail=$aux['mail']; //Cuenta de correo electronico desde donde se van a enviar las notificaciones
+$contrasena_mail=$aux['passwordmail']; //Contraseña de la cuenta de correo anteriormente ingresado
+$colorFondo = "8cacc1"; //Estilos que va a tomar el Orfeo por (Siempre esta el mismo porque esto hasta el momento no esta actualizado)
+$pais = "Colombia";
+$administrador = " ";
+$ESTILOS_PATH = $aux['estilos']; //Estilos que va a tomar el Orfeo
+$imagenes = $aux['imagenes']; //Carpeta de imagenes que se van a asignar en el orfeo
+$longitud_codigo_dependencia = $aux['digitos']; // Cantidad de caracteres que van a tener los codigos de las dependencias
+$depeRadicaFormularioWeb = str_pad($aux['codigoPqr'],$longitud_codigo_dependencia,'0', STR_PAD_LEFT); //Dependencia a la cual se asignan radicados web-pqr
+$entidad_depsal = str_pad("999",$longitud_codigo_dependencia,'0', STR_PAD_LEFT);//Guarda el codigo de la dependencia de salida
+$usuaRecibeWeb           = 1;  //Usuario que va a recepcionar los radicados web-pqr
+$secRadicaFormularioWeb  = "secr_tp4_".$aux['codigoPqr']; //Esta secuencia es para los consecutivos de PQR para pruebas es la 998
+?>

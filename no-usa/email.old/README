@@ -1,0 +1,60 @@
+			EMAIL
+			=====
+
+Modulo de lectura y radicacion de correo electronico del Sistema de
+Gestion Documental y de Procesos ORFEO.
+
+La única dependecia externa al modulo esta en /radiacion/NEW.php que debe
+estar actualizado para entender correo. Por lo demas es autocontenido.
+
+Prerequisitos
+-------------
+Los modulos de pear Mail_IMAPv2 y Net_URL son obligatorios. Ya estan
+descontinuados pero aun funcionan OK. Eventualmente toca re-escribir
+el modulo para independizarse de estos.
+
+Mail_IMAPv2      0.2.1   beta
+Net_URL          1.0.15  stable
+
+Los siguientes comandos deberian funcionar 
+
+#> pear install Mail_IMAPv2-0.2.1
+#> pear install Net_URL
+
+Previamente tiene que haber instalado php-pear y php-imap
+
+Configuración
+-------------
+
+En el archivo config.php se encuentra el servidor_email que es el usado para todos.
+
+Para probar si el código puede conectarse a  un servidor IMAP, use el archivo
+probador_connectIMAP.php, edite el usuario y contraseña y ejecutelo en linea de
+comandos
+
+> php probador_connectIMAP.php
+
+ahi debe recibir dos conexiones exitosas.
+
+En la base de datos cada usuario tiene un valor usua_email que debe tener el
+usuario de autenticacion de  imap: para un servidor normal es el username "skina"
+pero para algun servicio compartido como Cpanel es el correo el que se usa para
+autenticar: i.e skina@skinatech.com
+
+ChangeLog
+---------
+
+12-2013  Algunos detalles en la documentacion
+
+10-2012  Tenemos una version operativa funcional depurada con todo lo necesario
+         - Todo lo no util se ha movido a NO_USA
+         - Se ha incluido un formato de documentacion e indentacion
+         - Se re-escriben varios de las funcionalidades
+         - Leo, reenvio y borro correo OK
+         - Puedo ver los attachments
+         - Puedo radicar un correo
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Kasandra Padisha - SkinaTech (2012)
+

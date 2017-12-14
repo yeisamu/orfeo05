@@ -1,0 +1,67 @@
+.flotante{
+    border-radius: 30px;
+    background-color: #D33F4B;
+    width: 70%;
+    margin-top: 1%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-style: normal;
+    font-family: "Source Sans Pro",sans-serif;
+}
+.flotante h2{
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+}
+
+.flotante h4{
+    text-align: center;
+    padding: 1%;
+    color: #fff;
+}
+
+td>h4{
+    padding: 0% !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.flotante img{
+    display: inline-block;;
+    width: 20%;
+}
+.row{
+    width: 100%;
+
+}
+.row div{
+    border-radius: 5px;
+    padding: 1%;
+    margin-left: 6%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.row div p{
+    color: #fff;
+    margin-left: 10%;
+}
+
+.row div input{
+    color: #000;
+    margin-left: 10%;
+}
+.but{
+    display: inline-block;
+    font-size: 14px;
+    padding: .5%;
+    position: absolute;
+    color:#fff;
+    background-color: #D33F4B;
+    border-radius: 10px;
+    margin-left: -6%;
+    margin-top: 3%;
+}
+.box{
+    background-color: #1C4056;
+}
+
+

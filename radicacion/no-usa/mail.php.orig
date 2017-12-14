@@ -1,0 +1,126 @@
+<?php
+//Email 
+
+session_start();
+error_reporting(7);
+$ruta_raiz = "..";
+define('ADODB_ASSOC_CASE', 0);
+include_once "../include/db/ConnectionHandler.php";
+$db = new ConnectionHandler("$ruta_raiz");
+
+//$db->conn->debug=true;
+if ($tx!='Radicado')
+{
+	if($tx=='Reasignado' or $tx=='Informado'){
+                $nombre=$krd;
+                $apellido=$depe_nomb;
+		$where="USUA_NOMB='$usunom'";
+                                }
+
+	if($tx=='Devuelto'){
+                $nombre=$krd;
+                $apellido=$depe_nomb;
+                $where=" USUA_LOGIN='$usunom'";
+                }
+
+	$sql="SELECT USUA_CODI,DEPE_CODI  FROM USUARIO WHERE $where";
+	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+	$rs=$db->conn->query($sql);
+	$codusu=$rs->fields["usua_codi"];
+	$depemail=$rs->fields["depe_codi"];
+	}
+else
+{
+	$sql='SELECT RADI_DEPE_ACTU  as "DEPENDENCIA" FROM RADICADO WHERE RADI_NUME_RADI='.$verrad.'';
+	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+	$rs=$db->conn->query($sql);
+	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+	//$depemail=$rs->fields["DEPENDENCIA"];
+	$depemail=$rs->fields["dependencia"];
+}
+echo " codusu $codusu DEPEN $depemail usus $usunom asu  $asunto Rad $verrad radi $radi_nume";
+
+$sql="SELECT USUA_EMAIL FROM USUARIO WHERE USUA_CODI=$codusu AND DEPE_CODI=$depemail";
+$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+$rs=$db->conn->query($sql);
+//$mail=$rs->fields["USUA_EMAIL"];
+$mail=$rs->fields["usua_email"];
+
+//SE VERIFICA SI ES EMAIL
+    $mail_correcto = 0;
+    //compruebo unas cosas primeras
+    if ((strlen($mail) >= 6) && (substr_count($mail,"@") == 1) && (substr($mail,0,1) != "@") && (substr($mail,strlen($mail)-1,1) != "@")){
+       if ((!strstr($mail,"'")) && (!strstr($mail,"\"")) && (!strstr($mail,"\\")) && (!strstr($mail,"\$")) && (!strstr($mail," "))) {
+          //miro si tiene caracter .
+          if (substr_count($mail,".")>= 1){
+             //obtengo la terminacion del dominio
+             $term_dom = substr(strrchr ($mail, '.'),1);
+             //compruebo que la terminación del dominio sea correcta
+             if (strlen($term_dom)>1 && strlen($term_dom)<5 && (!strstr($term_dom,"@")) ){
+                //compruebo que lo de antes del dominio sea correcto
+                $antes_dom = substr($mail,0,strlen($mail) - strlen($term_dom) - 1);
+                $caracter_ult = substr($antes_dom,strlen($antes_dom)-1,1);
+                if ($caracter_ult != "@" && $caracter_ult != "."){
+                   $mail_correcto = 1;
+                }
+             }
+          }
+       }
+    }
+ 
+
+if($mail==' ' or $mail_correcto==0)
+	{
+  echo "No se pudo enviar notificacion, el usuario no tiene correo electronico o tiene un formato incorrecto, comuniquese con el administrador del sistema";
+	}
+else
+{
+	$fecha=date("F j, Y H:i:s");
+
+	//echo ("verrad= $verrad var_envio=$var_envio  dependencia=$dependencia codusuario $codusu asunto $asunto nombre $nombre fecha $fecha $apellido"); 
+	
+	//Cuerpo del email
+	$subject="Ha recibido un documento en Orfeo";
+	$cuerpo="
+	<html>
+	<head>
+ 	<title>CORRESPONDENCIA EN ORFEO</title>
+	</head>
+	<body><p>
+	Bogota D.C. ".$fecha." <br>
+	<br></br>
+	Ha recibido un documento en el Sistema de Gestion Documental Orfeo. Para verlo, ingrese al Sistema y revise el radicado  No  ".$verrad." ".$radi_nume."  enviado por  ".$nombre." ".$apellido." . Este documento fue ".$tx.". <br>
+	<br>Asunto:  ".$asunto."</br>
+	<br></br>
+	<br>Cordialmente, </br>
+	<br>Direccion Administrativa.
+	</p>
+	</body>
+	</html>
+	";
+//     echo $cuerpo;
+	$headers  = "MIME-Version: 1.0\r\n";
+	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+	$headers .= "Content-Transfer-Encoding: base64\r\n";
+
+	//direcci? del remitente
+	$headers .= "From: Direccion Administrativa <ctique@skinatech.com>\r\n";
+	$cuerpo=chunk_split(base64_encode($cuerpo));
+
+	/*Envio de mail con PHPMailer*/
+
+	$ok=mail($mail,$subject,$cuerpo,$headers);
+	if ($ok) echo("Se ha enviado una notificacion a $mail");
+	else echo ("No envio correo");
+}
+?>
+<html>
+<HEAD>
+<TITLE>Envio de Notificacion a Email
+</TITLE></HEAD>
+<BODY>
+<script>
+	//window.close();
+</script>
+</BODY>
+</html>

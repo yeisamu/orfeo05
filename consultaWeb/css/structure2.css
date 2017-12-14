@@ -1,0 +1,201 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+Title : Wufoo Form Structure
+Author : Infinity Box Inc.
+URL : http://wufoo.com
+
+Last Updated : September 30, 2008
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+body{
+	margin:7px 0 15px 0;
+	text-align:center;
+	font-size:small;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+#container{
+	text-align:left;
+	background:#fff;
+  	border-style: solid;
+    	border-color: #015967;
+	border-radius: 8px;
+}
+#container, #top, #bottom, #footer{
+	margin:0 auto;
+	width:70%;
+	border-radius: 8px;
+}
+
+#container2{
+        text-align:left;
+        background:#fff;
+        border-style: solid;
+        border-color: #015967;
+        border-radius: 8px;
+}
+#container2, #top, #bottom, #footer{
+        margin:0 auto;
+        width:90%;
+        border-radius: 8px;
+}
+
+#container2 ul{
+        margin:0;
+        padding:16;
+        list-style-type:none;
+        width:97%;
+}
+
+.datagrid table tbody td{
+    border-bottom: 1px solid #aeb8bd;
+    border-left: 1px solid #848b8f;
+    color: #00496b;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.datagrid table th {
+    padding: 3px 10px;
+    border-bottom: 1px solid #aeb8bd;
+    border-left: 1px solid #848b8f;
+    
+    font-size: 12.5px;
+    font-weight: normal;
+    background-color:#BDBDBD;
+}
+
+#encabezado{
+    background: url("../../imagenes/min_cabezote.gif") no-repeat scroll 0 0 #227384;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    height: 24px;
+    padding-right: 10px;
+    padding-top: 42px;
+    text-align: right;
+}
+
+#top, #bottom
+	width:650px;
+	height:10px !important;
+	display:block !important;
+}
+#top{
+	margin-top:10px;
+}
+
+form.wufoo{
+	margin:20px 20px 0 20px;
+	padding:0 0 20px 0;
+}
+
+/* ----- LOGO ----- */
+
+h1{
+	margin:0;
+	padding:0;
+	min-height:0;
+	background-color:#dedede;
+	text-indent:-9000px;
+	text-decoration:none;
+}
+
+img, a img{
+	border:none;
+}
+
+* html img { 
+	behavior: url(/images/iepngfix.htc);
+}
+
+.hide{
+	display:none !important;
+}
+
+.separator{
+	height: 50px;
+	display : block;
+}
+
+h4{
+	vertical-align:middle;
+	text-align:center;
+	color: white;
+	background-color:#B40404;        	
+	width :100%;
+	height:24px;
+	margin :0;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 2px;
+}
+
+fieldset{
+   /* -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 10px;*/
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*  
+ * Estilos para el formularioWeb, organizacion de los campos 					*
+ * By SkinaTech - Jenny Gamez - jmgamez@skinatech.com						*
+ * Fecha: 12 septiembre 2016									*
+ *----------------------------------------------------------------------------------------------*/
+#li_tipoSolicitante, #li_numeroDocumento, #li_tipoDocumento, 
+#li_nombre, #li_apellido, #li_apellido2, #li_razonsoc, #li_sigla, #li_replegal,
+#li_pais, #li_departamento, #li_municipio, #li_direccion, #li_telefono, #li_email,
+#li_tipoSolicitud, #foli4, #li_asunto{
+	width :30%;
+}
+
+#slect_datos, #tipoSolicitante, #doc_ciu, #tipoDocumento,
+#nom_ciu, #apll1_ciu, #apll2_ciu, #raz_social, #sigla, #rep_legal, 
+#slc_pais, #slc_depto, #slc_municipio, #dir_ciu, #tel_ciu, #email_ciu, #tipoSolicitud, #label7, #campo_asunto{
+ 	width :100%;
+}
+
+#soliDatos, #solNat, #solEmp, #solUbicar, #solDatos, #datosSolicitud{
+	overflow: hidden;
+}
+
+#soliDatos #li_numeroDocumento, #li_tipoSolicitante, #li_tipoDocumento{ 
+	float: left;
+	display: inline-block;
+	margin: 10px;	
+}
+
+#solNat #li_nombre, #li_apellido, #li_apellido2{  
+        float: left;
+        display: inline-block;
+        margin: 10px;
+}
+
+#solEmp #li_razonsoc, #li_sigla, #li_replegal{  
+        float: left;
+        display: inline-block;
+        margin: 10px;
+}
+
+#solUbicar #li_pais, #li_departamento, #li_municipio{                         
+        float: left;
+        display: inline-block;
+	margin: 10px;
+}
+
+#datosSolicitud #li_tipoSolicitud, #foli4, #li_asunto{                         
+        float: left;
+        display: inline-block;
+	margin: 10px;
+}
+
+#solDatos #li_direccion, #li_telefono, #li_email{                         
+        float: left;
+        display: inline-block;
+	margin: 10px;
+}
+
+

@@ -1,0 +1,5 @@
+--2016-11-30 16:13:58--  http://192.168.8.74/trunk/instalacion/secuenciasRadicacion.php?modoConexionBD=1
+Conectando con 192.168.8.74:80... conectado.
+Petición HTTP enviada, esperando respuesta... 500 Internal Server Error
+2016-11-30 16:13:58 ERROR 500: Internal Server Error.
+
