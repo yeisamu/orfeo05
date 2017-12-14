@@ -70,8 +70,8 @@ $_SESSION['carpeta'] = $_GET['carpeta']
 <html>
     <head>
     <link rel="stylesheet" href="<?= $ruta_raiz .$_SESSION['ESTILOS_PATH_ORFEO']?>">
-    <link rel="stylesheet" href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>header.css">
-    <link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION["ESTILOS_PATH2"] ?>header.css">
+    <link href="<?= $ruta_raiz . $_SESSION["ESTILOS_PATH2"] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
        <script src="estilos/js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="estilos/js/bootstrap.min.js" type="text/javascript"></script> 
         <script src="js/popcalendar.js"></script>
