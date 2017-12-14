@@ -34,7 +34,9 @@ error_reporting(0);
 session_start();
 $ruta_raiz = ".";
 $imagenes = $_SESSION["imagenes"];
-include ('config.php');
+//include ('config.php');
+include_once("config.php");
+
 ?>
 <html>
     <head>
@@ -64,6 +66,24 @@ include ('config.php');
         </script> 
 
         <script language="JavaScript" type="text/JavaScript"> 
+
+        selecMenuAnt=-1;
+swVePerso = 0;
+numPerso = 0;
+function cambioMenu(img){
+
+        MM_swapImage('plus' + img,'','<?=$imagenes?>/menuraya.gif',1);
+
+    if (selecMenuAnt!=-1 && img!=selecMenuAnt)
+        MM_swapImage('plus' + selecMenuAnt,'','<?=$imagenes?>/menu.gif',1);
+    selecMenuAnt = img;
+
+    if (swVePerso==1 && numPerso!=img){
+        document.getElementById('carpersolanes').style.display="none";
+        MM_swapImage('plus' + numPerso,'','<?=$imagenes?>/menu.gif',1);
+        swVePerso=0;
+    }
+}
             var contentMainFrame;
             function cerrar_session() {
                 if (confirm('Est\xe1 seguro de Cerrar Sesion ?')){

@@ -31,6 +31,9 @@
 
 
 session_start();
+//include ('config.php');
+include_once("config.php");
+
 foreach ($_GET as $key => $valor)   ${$key} = $valor;
 foreach ($_POST as $key => $valor)   ${$key} = $valor;
 

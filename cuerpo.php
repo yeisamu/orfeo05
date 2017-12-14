@@ -64,7 +64,7 @@ error_reporting(7);
 $verrad = "";
 $_SESSION['numExpedienteSelected'] = null;
 $_SESSION['carpeta'] = $_GET['carpeta']
-include ('config.php');
+//include ('config.php');
 
 ?>
 <html>
