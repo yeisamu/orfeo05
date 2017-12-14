@@ -134,7 +134,7 @@ $nombreTp3 = $tip3Nombre[3][$ent];
 <meta http-equiv="expires" content="99999999999">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link rel="stylesheet" href="../estilos/tabber.css" TYPE="text/css" MEDIA="screen">
-<link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="<?= $ruta_raiz . $_SESSION["ESTILOS_PATH2"] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
 
 <script Language="JavaScript" src="../js/crea_combos_2.js"></script>

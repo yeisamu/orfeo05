@@ -11,7 +11,7 @@
  */
 
 // GLOBAL variables
-var scImgPath = 'images/';
+var scImgPath = '../js/spiffyCal/images/';
 
 var scIE=((navigator.appName == "Microsoft Internet Explorer") || ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion)==5)));
 var scNN6=((navigator.appName == "Netscape") && (parseInt(navigator.appVersion)==5));
