@@ -34,6 +34,7 @@ error_reporting(0);
 session_start();
 $ruta_raiz = ".";
 $imagenes = $_SESSION["imagenes"];
+include ('config.php');
 ?>
 <html>
     <head>
