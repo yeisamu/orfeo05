@@ -66,29 +66,6 @@ include_once("config.php");
         </script> 
 
         <script language="JavaScript" type="text/JavaScript"> 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-        selecMenuAnt=-1;
-swVePerso = 0;
-numPerso = 0;
-function cambioMenu(img){
-
-        MM_swapImage('plus' + img,'','<?=$imagenes?>/menuraya.gif',1);
-
-    if (selecMenuAnt!=-1 && img!=selecMenuAnt)
-        MM_swapImage('plus' + selecMenuAnt,'','<?=$imagenes?>/menu.gif',1);
-    selecMenuAnt = img;
-
-    if (swVePerso==1 && numPerso!=img){
-        document.getElementById('carpersolanes').style.display="none";
-        MM_swapImage('plus' + numPerso,'','<?=$imagenes?>/menu.gif',1);
-        swVePerso=0;
-    }
-}
-
-
             var contentMainFrame;
             function cerrar_session() {
                 if (confirm('Est\xe1 seguro de Cerrar Sesion ?')){
