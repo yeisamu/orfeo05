@@ -105,7 +105,7 @@ $administrador = "yeison.velasquez@gmaill.com";
 //el archivo orfeo.css y cambie sus colores.
 $ESTILOS_PATH = "/estilos/orfeo38/";
 //ruta para estilos de prueba
-echo $ESTILOS_PATH2 = "/estilos/orfeo50/";
+$ESTILOS_PATH2 = "/estilos/orfeo50/";
 $ESTILOS_PATH_ORFEO = "/estilos/orfeo.css";
 //Logo orfeo en el header
 $logoSuperiorOrfeo=true;
