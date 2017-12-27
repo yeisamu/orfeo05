@@ -52,7 +52,7 @@ while ($tmp = $rs_depvis->FetchRow()) {
     <head>
         <title>Untitled Document</title>
         <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
-        <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH2'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?
