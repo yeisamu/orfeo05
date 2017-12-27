@@ -32,7 +32,7 @@ if (!$dependencia)
 
 <html>
     <head>
-        <link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
     </head>
     <body bgcolor="#FFFFFF" topmargin="0" onLoad="window_onload();">
