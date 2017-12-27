@@ -25,7 +25,7 @@ if (!isset($fecha_busq))
 <html>
     <head>
         <title>Edicion de Usuarios</title>
-        <link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
         <script language="JavaScript" src="<?= $ruta_raiz ?>/js/formchek.js"></script>
         <script language="javascript">

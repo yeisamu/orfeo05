@@ -59,7 +59,7 @@ $radSelec = "";
 <html>
 <head>
 <title>Envio de Documentos. Orfeo...</title>
-    <link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
     <script src="<?= $ruta_raiz?>/estilos/js/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="<?= $ruta_raiz?>/estilos/js/bootstrap.min.js" type="text/javascript"></script>
