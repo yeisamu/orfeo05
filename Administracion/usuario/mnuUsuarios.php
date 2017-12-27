@@ -7,7 +7,7 @@ if (!$_SESSION['dependencia'] or ! $_SESSION['tpDepeRad'])
 <html>
     <head>
         <title>Documento sin t&iacute;tulo</title>
-        <link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH2'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
     </head>
     <body>
