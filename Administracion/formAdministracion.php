@@ -58,7 +58,7 @@ if($_SESSION['usua_admin_sistema']!=1) die(include "$ruta_raiz/sinacceso.php");
 <html>
 <head>
 <title>Documento  sin t&iacute;tulo</title>
-<link rel="stylesheet" href="<?=$_SESSION['ESTILOS_PATH_ORFEO']?>">
+<link rel="stylesheet" href="<?= $ruta_raiz .$_SESSION['ESTILOS_PATH_ORFEO']?>">
 <link href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH2'] ?>bootstrap.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
