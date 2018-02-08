@@ -44,26 +44,26 @@ $tip3Nombre = $_SESSION["tip3Nombre"];
 $tip3desc = $_SESSION["tip3desc"];
 $tip3img = $_SESSION["tip3img"];
 $cancelarAnular =false;
-if ($_GET["carpeta"])
-    $carpeta = $_GET["carpeta"];
-$tipo_carpt = $_GET["tipo_carpt"];
-$adodb_next_page = $_GET["adodb_next_page"];
-if ($_GET["gen_lisDefi"])
-    $gen_lisDefi = $_GET["gen_lisDefi"];
-if ($_GET["dep_sel"])
-    $dep_sel = $_GET["dep_sel"];
-if ($_GET["generar_listado"])
-    $generar_listado = $_GET["generar_listado"];
-if ($_GET["cancelarAnular"])
-    $cancelarAnular = $_GET["cancelarAnular"];
-if ($_GET["orderNo"])
-    $orderNo = $_GET["orderNo"];
-if ($_GET["orderTipo"])
-    $orderTipo = $_GET["orderTipo"];
-if ($_GET["busqRadicados"])
-    $gen_lisDefi = $_GET["busqRadicados"];
-if ($_GET["gen_lisDefi"])
-    $gen_lisDefi = $_GET["gen_lisDefi"];
+if ($_REQUEST["carpeta"])
+    $carpeta = $_REQUEST["carpeta"];
+$tipo_carpt = $_REQUEST["tipo_carpt"];
+$adodb_next_page = $_REQUEST["adodb_next_page"];
+if ($_REQUEST["gen_lisDefi"])
+    $gen_lisDefi = $_REQUEST["gen_lisDefi"];
+if ($_REQUEST["dep_sel"])
+    $dep_sel = $_REQUEST["dep_sel"];
+if ($_REQUEST["generar_listado"])
+    $generar_listado = $_REQUEST["generar_listado"];
+if ($_REQUEST["cancelarAnular"])
+    $cancelarAnular = $_REQUEST["cancelarAnular"];
+if ($_REQUEST["orderNo"])
+    $orderNo = $_REQUEST["orderNo"];
+if ($_REQUEST["orderTipo"])
+    $orderTipo = $_REQUEST["orderTipo"];
+if ($_REQUEST["busqRadicados"])
+    $gen_lisDefi = $_REQUEST["busqRadicados"];
+if ($_REQUEST["gen_lisDefi"])
+    $gen_lisDefi = $_REQUEST["gen_lisDefi"];
 
 $verrad = "";
 $ruta_raiz = "..";
