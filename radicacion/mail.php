@@ -88,7 +88,7 @@ else
 $sql="SELECT USUA_EMAIL FROM USUARIO WHERE USUA_CODI=$codusu AND DEPE_CODI='$depemail'";
 $db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
 $rs=$db->conn->query($sql);
-$mail_usu=$rs->fields["usua_email"];
+echo $mail_usu=$rs->fields["usua_email"];
 
 //SE VERIFICA SI ES EMAIL
     $mail_correcto = 0;
@@ -113,76 +113,76 @@ $mail_usu=$rs->fields["usua_email"];
     }
  
 
-if($mail==' ' or $mail_correcto==0)
-	{
-  echo "No se pudo enviar notificacion, el usuario no tiene correo electronico o tiene un formato incorrecto, comuniquese con el administrador del sistema";
-	}
-else
-{
-	$fecha=date("F j, Y H:i:s");
-    $usMailSelect  = $cuenta_mail;
-    list($a,$b)=split("@",$usMailSelect);
-    $userName=$a;
+// if($mail==' ' or $mail_correcto==0)
+// 	{
+//   echo "No se pudo enviar notificacion, el usuario no tiene correo electronico o tiene un formato incorrecto, comuniquese con el administrador del sistema";
+// 	}
+// else
+// {
+// 	$fecha=date("F j, Y H:i:s");
+//     $usMailSelect  = $cuenta_mail;
+//     list($a,$b)=split("@",$usMailSelect);
+//     $userName=$a;
 
-    $mail->IsSMTP(); // telling the class to use SMTP
-    /*$mail->AddReplyTo($usMailSelect);*/
-    $mail->SetFrom($usMailSelect,"Sistema Gestion documental ORFEO");
-    $mail->Host       = $servidor_mail_smtp;
-    $mail->Port       = $puerto_mail_smtp;
-    $mail->SMTPDebug  = "1";  // 1 = errors and messages // 2 = messages only 
-    $mail->SMTPAuth   = "true";
-    $mail->SMTPSecure = "";
-    /*$mail->AuthType   = $tipoAutenticacion;*/
-    $mail->Username   = $usMailSelect;   // SMTP account username
-    $mail->Password   = $contrasena_mail; // SMTP account password
-    $mail->Subject    = "Ha recibido un documento en orfeo";
-    $mail->AltBody    = "Para ver el mensaje, por favor use un visor de E-mail compatible!";
-    /*$url=true;*/
-    $mail->AddAddress($mail_usu);
-    $expCant = explode("','",$verrad." ".$radi_nume);
+//     $mail->IsSMTP(); // telling the class to use SMTP
+//     /*$mail->AddReplyTo($usMailSelect);*/
+//     $mail->SetFrom($usMailSelect,"Sistema Gestion documental ORFEO");
+//     $mail->Host       = $servidor_mail_smtp;
+//     $mail->Port       = $puerto_mail_smtp;
+//     $mail->SMTPDebug  = "1";  // 1 = errors and messages // 2 = messages only 
+//     $mail->SMTPAuth   = "true";
+//     $mail->SMTPSecure = "";
+//     /*$mail->AuthType   = $tipoAutenticacion;*/
+//     $mail->Username   = $usMailSelect;   // SMTP account username
+//     $mail->Password   = $contrasena_mail; // SMTP account password
+//     $mail->Subject    = "Ha recibido un documento en orfeo";
+//     $mail->AltBody    = "Para ver el mensaje, por favor use un visor de E-mail compatible!";
+//     /*$url=true;*/
+//     $mail->AddAddress($mail_usu);
+//     $expCant = explode("','",$verrad." ".$radi_nume);
     
-    $asu .= "<hr>Sistema de gestion documental Orfeo.";
-    $mensaje = "<html>
-        <head>
-        <title>CORRESPONDENCIA EN ORFEO</title>
-        </head>
-        <body><p>
-        Sociedad Hotelera Tequendama , ".$fecha." <br>
-        <br></br>
-        Ha recibido un ".$tx." en el Sistema de Gesti&oacute;n Documental Orfeo. Ingrese ";
+//     $asu .= "<hr>Sistema de gestion documental Orfeo.";
+//     $mensaje = "<html>
+//         <head>
+//         <title>CORRESPONDENCIA EN ORFEO</title>
+//         </head>
+//         <body><p>
+//         Sociedad Hotelera Tequendama , ".$fecha." <br>
+//         <br></br>
+//         Ha recibido un ".$tx." en el Sistema de Gesti&oacute;n Documental Orfeo. Ingrese ";
 
-	// By Skina - jmgamez@skinatech.com - 22 de Julio 2016
-	// Se agrega el ciclo para validar la URL por cada radicado que se notifique, este cambio aplica para Informados, Radicacion, Reasignacion 	
-	for($i=0; $i<count($expCant); $i++){
-	 $bodytag = str_replace("'", "", $expCant[$i]);
-         $mensaje .=  'al radicado <a href="http://192.168.8.74/old/orfeoRIO/verradicado.php?verrad='.$bodytag.'"> '.$bodytag.' </a> , ';
-   	}
+// 	// By Skina - jmgamez@skinatech.com - 22 de Julio 2016
+// 	// Se agrega el ciclo para validar la URL por cada radicado que se notifique, este cambio aplica para Informados, Radicacion, Reasignacion 	
+// 	for($i=0; $i<count($expCant); $i++){
+// 	 $bodytag = str_replace("'", "", $expCant[$i]);
+//          $mensaje .=  'al radicado <a href="http://192.168.8.74/old/orfeoRIO/verradicado.php?verrad='.$bodytag.'"> '.$bodytag.' </a> , ';
+//    	}
 
-    $mensaje .= "enviado por  ".$nombre." ".$apellido." <br></br>
-        <br>Asunto:  ".$asunto."</br>
-        <br></br>
-        <br>Cordialmente, </br>
-        <br>Sistema de Gestion Documental Orfeo
-        </p>
-        </body>
-        </html>
-        ";
-    $mail->MsgHTML(utf8_decode($mensaje));
+//     $mensaje .= "enviado por  ".$nombre." ".$apellido." <br></br>
+//         <br>Asunto:  ".$asunto."</br>
+//         <br></br>
+//         <br>Cordialmente, </br>
+//         <br>Sistema de Gestion Documental Orfeo
+//         </p>
+//         </body>
+//         </html>
+//         ";
+//     $mail->MsgHTML(utf8_decode($mensaje));
    
-	 while ((!$exito) && ($intentos < 5) && $mail_usu!="") {
-            $mail->ErrorInfo;
-            $exito = $mail->Send();
-           if (!$exito)
-              { 
-                echo ("<br> No se pudo enviar correo");
-              }else{
-	        echo("<br> Se ha enviado una notificaci&oacute;n a $mail_usu");
-              }
-            $intentos=$intentos+1;
-            sleep(7);
-         }     
+// 	 while ((!$exito) && ($intentos < 5) && $mail_usu!="") {
+//             $mail->ErrorInfo;
+//             $exito = $mail->Send();
+//            if (!$exito)
+//               { 
+//                 echo ("<br> No se pudo enviar correo");
+//               }else{
+// 	        echo("<br> Se ha enviado una notificaci&oacute;n a $mail_usu");
+//               }
+//             $intentos=$intentos+1;
+//             sleep(7);
+//          }     
 
-}
+// }
 ?>
 <html>
 <HEAD>

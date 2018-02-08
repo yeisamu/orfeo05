@@ -1,0 +1,1854 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bod",
+				"body2"
+			],
+			[
+				"valu",
+				"valuenot"
+			],
+			[
+				"array",
+				"arrayper"
+			],
+			[
+				"arra",
+				"arrayper"
+			],
+			[
+				"Le",
+				"LEFT"
+			],
+			[
+				"join",
+				"JOIN"
+			],
+			[
+				"ide",
+				"identrada"
+			],
+			[
+				"texto",
+				"textores"
+			],
+			[
+				"VU_entra",
+				"VU_entrada_detail"
+			],
+			[
+				"codigo",
+				"enm_codigo"
+			],
+			[
+				"ctrv",
+				"ctrv_brand_ID"
+			],
+			[
+				"w",
+				"width=\"8	(scripts_ventanilla.js)"
+			],
+			[
+				"tab",
+				"table	(ctr_ventanilla.php)"
+			],
+			[
+				"Da",
+				"DataTable	(analisisr.php)"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"id",
+				"id	Attr"
+			],
+			[
+				"cuenta",
+				"cuentaremi"
+			],
+			[
+				"doc_ta",
+				"doc_target_ID"
+			],
+			[
+				"av_cum",
+				"av_cumplimiento"
+			],
+			[
+				"print",
+				"print_r($value	(ctr_ventanilla.php)"
+			],
+			[
+				"NOTI",
+				"noti_tipo"
+			],
+			[
+				"control",
+				"control_load"
+			],
+			[
+				"color",
+				"colornot"
+			],
+			[
+				"str",
+				"strtotime	(ctr_ventanilla.php)"
+			],
+			[
+				"accri",
+				"accries"
+			],
+			[
+				"b",
+				"busca"
+			],
+			[
+				"sera",
+				"search_all"
+			],
+			[
+				"cl",
+				"class"
+			],
+			[
+				"info",
+				"info-number"
+			],
+			[
+				"sty",
+				"style	Tag"
+			],
+			[
+				"dateD",
+				"dateDisabled1"
+			],
+			[
+				"prin",
+				"print_r($res"
+			],
+			[
+				"not_tar",
+				"not_target_ID	(Mecicontrol.php)"
+			],
+			[
+				"max",
+				"max_meta"
+			],
+			[
+				"last",
+				"last_query"
+			],
+			[
+				"per",
+				"per_nombres"
+			],
+			[
+				"data",
+				"datapedido"
+			],
+			[
+				"Redireccion",
+				"Redireccionamiento"
+			],
+			[
+				"hide",
+				"hidecal"
+			],
+			[
+				"res",
+				"resupload"
+			],
+			[
+				"respon",
+				"respondat"
+			],
+			[
+				"sele",
+				"select"
+			],
+			[
+				"stro",
+				"strtotime	(Mapa_model.php)"
+			],
+			[
+				"compro",
+				"compromiso"
+			],
+			[
+				"per_c",
+				"per_count"
+			],
+			[
+				"user",
+				"user_ID"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"audi",
+				"audritoria"
+			],
+			[
+				"order",
+				"order_by"
+			],
+			[
+				"or",
+				"order_by	(Funcionarios.php)"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"gro",
+				"group_by"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"inde",
+				"index.php	(meci_fmapa.js)"
+			],
+			[
+				"num",
+				"num_rows	(Funcionarios.php)"
+			],
+			[
+				"s",
+				"sql1"
+			],
+			[
+				"sql",
+				"sql3"
+			],
+			[
+				"ma_co",
+				"ma_codigor	(meci_fmapa.js)"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"quer",
+				"queriv"
+			],
+			[
+				"ext",
+				"extl"
+			],
+			[
+				"abre",
+				"abreinfo"
+			],
+			[
+				"row",
+				"rowspan	Attr"
+			],
+			[
+				"over",
+				"overflow	(analisisr.php)"
+			],
+			[
+				"col",
+				"colspan	Attr"
+			],
+			[
+				"total",
+				"totalv"
+			],
+			[
+				"wi",
+				"width	(informefun.php)"
+			],
+			[
+				"per_ap",
+				"per_apellido2	(Mecicontrol.php)"
+			],
+			[
+				"per_nom",
+				"per_nombre2	(Mecicontrol.php)"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"idr",
+				"idri"
+			],
+			[
+				"per_no",
+				"per_nombre2"
+			],
+			[
+				"ri",
+				"right	(inicio.php)"
+			],
+			[
+				"bo",
+				"bottom	(formularios_eval_desem.php)"
+			],
+			[
+				"tries",
+				"triesgos"
+			],
+			[
+				"base",
+				"base_url"
+			],
+			[
+				"styl",
+				"style"
+			],
+			[
+				"ME_ca",
+				"ME_cargo"
+			],
+			[
+				"area",
+				"arearespon"
+			],
+			[
+				"prop",
+				"propuesto"
+			],
+			[
+				"efec",
+				"efecti	(analisisr.php)"
+			],
+			[
+				"fre",
+				"frecade	(analisisr.php)"
+			],
+			[
+				"hay",
+				"hayres"
+			],
+			[
+				"proba",
+				"probanalisis"
+			],
+			[
+				"impacto",
+				"impactoalisis"
+			],
+			[
+				"back",
+				"background	(main.css)"
+			],
+			[
+				"pro",
+				"proba"
+			],
+			[
+				"ros",
+				"rowspan	Attr"
+			],
+			[
+				"param",
+				"paramload"
+			],
+			[
+				"des",
+				"desriesgo	(detaller.php)"
+			],
+			[
+				"Ma",
+				"Mapariesgo	(meci_fmapa.js)"
+			],
+			[
+				"con",
+				"configuracion"
+			],
+			[
+				"font",
+				"font-size	(vis_index.php)"
+			],
+			[
+				"bran",
+				"brand_ID"
+			],
+			[
+				"ane",
+				"anexos_soporte	(funcionarios.php)"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"ida",
+				"idapp"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"clase",
+				"claseicon"
+			],
+			[
+				"sw",
+				"switch	(Mecicontrol.php)"
+			],
+			[
+				"remo",
+				"removeClass	(meci_funciones.js)"
+			],
+			[
+				"soln",
+				"soln_estado=\"activo	(Calidadctr.php)"
+			],
+			[
+				"cambia",
+				"cambiadoc"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"ot",
+				"otw"
+			],
+			[
+				"per_nombre",
+				"per_nombre1	(Mecicontrol.php)"
+			],
+			[
+				"query",
+				"querypen"
+			],
+			[
+				"mae",
+				"maestrodocs	(Calidadctr.php)"
+			],
+			[
+				"Calidad",
+				"Calidadctr	(inicio.php)"
+			],
+			[
+				"console",
+				"console.log	(scripts_gesdoc.js)"
+			],
+			[
+				"ota",
+				"oTable_estr"
+			],
+			[
+				"ms",
+				"msg	(mod_ventanilla.php)"
+			],
+			[
+				"ubi",
+				"ubicaext"
+			],
+			[
+				"menu",
+				"menubica"
+			],
+			[
+				"eac",
+				"each"
+			],
+			[
+				"gan",
+				"ganttdata"
+			],
+			[
+				"Talento",
+				"Talentoh"
+			],
+			[
+				"items",
+				"itemstree"
+			],
+			[
+				"style",
+				"style='margin"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"re",
+				"regular"
+			],
+			[
+				"campo",
+				"campoid	(Mecicontrol.php)"
+			],
+			[
+				"array_me",
+				"array_menu_group"
+			],
+			[
+				"class",
+				"classe"
+			],
+			[
+				"apps",
+				"appsadd_edit_form	(Mecicontrol.php)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/yeisonvelasquez/Downloads/orfeo05/Administracion/formAdministracion.php",
+			"settings":
+			{
+				"buffer_size": 5014,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mnuUsuarios.php",
+			"settings":
+			{
+				"buffer_size": 1987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/yeisonvelasquez/Downloads/orfeo05/radicacion/NEW.php",
+			"settings":
+			{
+				"buffer_size": 90139,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "crear.php",
+			"settings":
+			{
+				"buffer_size": 23587,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cuerpoConsulta.php",
+			"settings":
+			{
+				"buffer_size": 6584,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cuerpoEdicion.php",
+			"settings":
+			{
+				"buffer_size": 8136,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "validar.php",
+			"settings":
+			{
+				"buffer_size": 29151,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "consultaPermisos.php",
+			"settings":
+			{
+				"buffer_size": 19179,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "consultaDatosGrales.php",
+			"settings":
+			{
+				"buffer_size": 17052,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "consultaHistorico.php",
+			"settings":
+			{
+				"buffer_size": 5816,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "contro",
+		"selected_items":
+		[
+			[
+				"contro",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Material Theme: Extras"
+			],
+			[
+				"bs-form",
+				"Snippet: bs3-form"
+			]
+		],
+		"width": 374.0
+	},
+	"console":
+	{
+		"height": 195.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/yeisonvelasquez/Downloads/orfeo05",
+		"/Users/yeisonvelasquez/Downloads/orfeo05/Administracion",
+		"/Users/yeisonvelasquez/Downloads/orfeo05/Administracion/usuario",
+		"/Users/yeisonvelasquez/Downloads/orfeo05/include",
+		"/Users/yeisonvelasquez/Downloads/orfeo05/include/db"
+	],
+	"file_history":
+	[
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/controllers/Informes.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/informes/detariesgo.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/libs/conf_constantes.php",
+		"/Users/yeisonvelasquez/Downloads/snake/snake3/snake3/Enemigo.cs",
+		"/Users/yeisonvelasquez/Downloads/snake/snake3/snake3/Comida.cs",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_entrada.php",
+		"/Users/yeisonvelasquez/Dropbox/desarrollos/gestion_documental/libs/conf_constantes.php",
+		"/Users/yeisonvelasquez/Dropbox/desarrollos/Gestión documental/libs/conf_constantes.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_entradaext_list.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/acuerdos/protocolos.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/inicio.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_ventanilla.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/js/scripts_ventanilla.js",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/funcionarios/funcionarios.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/personal/vis_personal_form_ciudadano.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_personal.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/personal/vis_personal_list.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/js/scripts_ventanilla_alternativo.js",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_tipo_requerimiento_list.php",
+		"/Users/yeisonvelasquez/Dropbox/diarios/sart/controllers/Sistemasart.php",
+		"/Users/yeisonvelasquez/Dropbox/diarios/sart/views/sart/certificados/imprimecerti.php",
+		"/Users/yeisonvelasquez/Dropbox/diarios/js/funciones.js",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_tipo_doc_form.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_informe.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_informe.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_ventanilla.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/controllers/Mecicontrol.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_salida.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_salida.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/js/scripts_ventanilla_salida.js",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/controllers/Mapariesgo.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/mapariesgos/analisisr.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/acuerdos/avancesmp.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/mapariesgos/avancesri.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/assets/js/meci_fmapa.js",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_descripcion.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_revision.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_revision_form.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_revision.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_version.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_version.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_entrada.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_entradaext_list_table.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/datatest.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_entrada_list_table.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/personal/vis_personal_sel_todo.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_clase_tramite_list.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/personal/vis_personal_form_ciudadano_cp.php",
+		"/Volumes/YEISAMU/orfeo/instalacion php debian",
+		"/Users/yeisonvelasquez/Downloads/config.orf",
+		"/Users/yeisonvelasquez/Downloads/conf.ini",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/models/Mapa_model.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/assets/js/meci_funciones_alternativo.js",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_tipo_doc_list.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_tipodoc.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_notificaciones.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_index.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_entrada_list.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_entrada_form.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_revision_list.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_revision_list_table.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_notificacion.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/informes/excelriesgo.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_notificacion_list.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_notificaciones_list_table.php",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/Language.java",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/DataSource.java",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/res/layout/activity_main.xml",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/MainActivity.java",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/MyARManager.java",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/CustomGeoPoiClickActivity.java",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/MyModelManager.java",
+		"/Users/yeisonvelasquez/Downloads/VisionSDKDemo 2/src/com/geomobile/vision/demo/MyModelManagerPreload.java",
+		"/Users/yeisonvelasquez/Downloads/GEOMOBILE-VISION_SDK_AndroidOS-v1.0.0 2/vision_sdk_library/gen/com/geomobile/BuildConfig.java",
+		"/Users/yeisonvelasquez/Downloads/GEOMOBILE-VISION_SDK_AndroidOS-v1.0.0 2/google-play-services_lib/gen/com/google/android/gms/Manifest.java",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/libs/class_db.php",
+		"/Users/yeisonvelasquez/Downloads/orfeo-4.5-skn1/Administracion/tbasicas/adm_dependencias.php",
+		"/Users/yeisonvelasquez/Downloads/orfeo-4.5-skn1/js/crea_combos_2.js",
+		"/Users/yeisonvelasquez/Downloads/orfeo-4.5-skn1/Administracion/dependencia/listado.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/css/style.css",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/mapariesgos/detallemp.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/assets/js/pages/kendoui.js",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/mapariesgos/avancesmp.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/mapariesgos/planmejoraproc.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/informes/vis_report_dependencias_estado_finalizacion.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/assets/js/uikit_custom.js",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/assets/js/kendoui_custom.js",
+		"/Users/yeisonvelasquez/Desktop/villacespedes",
+		"/Users/yeisonvelasquez/Dropbox/ptros/admin/admin/html/dist/components_common.html",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/mapariesgos/accionesxexe.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/assets/js/meci_funciones.js",
+		"/Users/yeisonvelasquez/Dropbox/diarios/sart/models/Sart_model.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/informes/vis_form_informe_entradas_salidas.php",
+		"/Users/yeisonvelasquez/Dropbox/ptros/pleasure/app/admin1/ui-elements-dialogs.html",
+		"/Users/yeisonvelasquez/Dropbox/diarios/sart/views/sart/movil/certi_tabla.php",
+		"/Users/yeisonvelasquez/Dropbox/diarios/sart/controllers/Certi.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/models/Meci_model.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/acuerdos/detalle_protocolo.php",
+		"/Users/yeisonvelasquez/Dropbox/ptros/pleasure/app/admin1/ui-elements-buttons.html",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/controldocs/listadocs.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/notificaciones/tabla_notificaciones.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/notificaciones/notificaciones.php",
+		"/Users/yeisonvelasquez/Dropbox/diarios/contrato/print_extracto.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/evaluacion_desem/formularios_eval_desem.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/models/Funcionarios_model.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/controllers/Evaluacion_desem.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/revision/revision.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/views/funcionarios/funcionarios (Copia en conflicto de Luis Daniel Cardozo 2016-12-05).php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/modelo/mod_personal.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/control/ctr_tipoenvio.php",
+		"/Users/yeisonvelasquez/Dropbox/sart/diarios/sart/views/sart/movil/vis_add_edit_movil.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/pedidos/ordenpedido.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/controllers/Ssifex.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/version/vis_version_list_table.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/version/vis_control_version_form.php",
+		"/Users/yeisonvelasquez/Dropbox/ventanilla/vista/vis_entrada_form_edit.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/pedidos/vis_detail_orden.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/js/funciones.js",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/clientes/vis_detail_distri.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/clientes/add_edit_distri.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/vista_principal.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/models/Ssifex_model.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/pedidos/pedidos_tabla.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/pedidos/add_edit_pedidos.php",
+		"/Users/yeisonvelasquez/Dropbox/meci/vista/vis_entrada_form_edit.php",
+		"/Users/yeisonvelasquez/Dropbox/meci_sige/application/libraries/My_phpmailer.php",
+		"/private/var/folders/wx/kqdd40jn173bx8qzy1q3jfp00000gn/T/fz3temp-2/My_phpmailer.php",
+		"/Users/yeisonvelasquez/Dropbox/ssifex/views/clientes/cliente_tabla.php"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 136.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"expirado",
+			"alfa",
+			"$ESTILOS_PATH2",
+			"detariesgos",
+			"sam_per_cedula",
+			"informe_salidas",
+			"VU_salida_master",
+			"aColumns",
+			"CASE WHEN a.enm_status",
+			"detalle_entrada",
+			"Username",
+			"value",
+			"mail",
+			"MAIL",
+			"mail",
+			"titulo",
+			"list_entrada",
+			"value",
+			"vencimiento",
+			"notificarProxVencidos",
+			"personal",
+			"end_per_cedula",
+			"informe_entradas",
+			"24,",
+			"23,",
+			"25,",
+			"33,",
+			"23, '",
+			"23,",
+			"34, '",
+			"33",
+			"32",
+			" 27,",
+			"31,",
+			" 19,",
+			"$path = ",
+			"documento",
+			"sam_fecha_fm",
+			"reqerimiento_detalle",
+			" call_modal_control_version",
+			"ventanillaapp.table",
+			"list_ibs",
+			"table",
+			"detalle_salida",
+			"count",
+			"salidas",
+			"genera_reporte_todos",
+			"'rma_menu_id' => 4,",
+			"generar_excel_fuera",
+			"generar_excel_vencidos",
+			"end_per_cedula",
+			"$filter['end_per_cedula'] =$user_ID ; ",
+			"generar_excel_entradasex",
+			"generar_excel_entradas",
+			"generar_reporte",
+			"informe_entradas",
+			"aRow_menu_acc",
+			"rol_sesion",
+			"A",
+			"';\n",
+			"tab_list",
+			"cant_vencidos",
+			"echo",
+			"enm_status",
+			"go_action",
+			"proceso2",
+			"go_action",
+			"proceso2",
+			"active",
+			"classinrev",
+			"end_fecha_entrega",
+			"persona_responde",
+			"ib",
+			"desplegar_current_list",
+			"abredetalle",
+			"gestion_documental",
+			"localhost",
+			"toggle_filter",
+			"toggle_filter1",
+			"toggle_filter",
+			"adminUser",
+			"toggle_view",
+			"page_org",
+			"adminUser",
+			"toggle_filter1",
+			"oTable_estr",
+			"draw",
+			"toggle_filter",
+			"adminUser",
+			"\"",
+			"adminUser",
+			"table",
+			"desplegar_current_entrada",
+			"ib",
+			"interno",
+			"externo",
+			"scroll",
+			"Scroll",
+			"scroll",
+			"Scroll",
+			"scroll",
+			"path",
+			"aRow_menu_acc",
+			"sIndexColumn",
+			"class_row",
+			"proceso2",
+			"array",
+			"editar",
+			"array",
+			"rResult",
+			"textores1",
+			"array",
+			"aColumns",
+			"dias_vence",
+			"proceso",
+			"proceso2",
+			"vence",
+			"enm_fecha_fm",
+			"identrada",
+			"14",
+			"notificacion",
+			"$_GET['sSearch']",
+			"desplegar_current_entradaext",
+			"url",
+			"foreach",
+			"ctrv_brand_ID",
+			"detalle_entrada",
+			"get_data_from_json"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"datepickerx",
+			"user_auth_global_edit",
+			"pledged_financed_add",
+			"pledged_financed",
+			"fd6444",
+			"../../",
+			"../libs/",
+			"libs/",
+			"libs",
+			"scale(1)",
+			"properties_owner"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/yeisonvelasquez/Downloads/orfeo05/Administracion/formAdministracion.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1978,
+								2004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1234.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "mnuUsuarios.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/yeisonvelasquez/Downloads/orfeo05/radicacion/NEW.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 90139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5027,
+								5040
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2850.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "crear.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16301,
+								16305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1923.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "cuerpoConsulta.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5018,
+								5018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 367.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "cuerpoEdicion.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3480,
+								3480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 990.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "validar.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29151,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4286,
+								4286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1984.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "consultaPermisos.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2954,
+								2954
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1015.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "consultaDatosGrales.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17052,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2507,
+								2507
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 693.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "consultaHistorico.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2159,
+								2159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 235.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"vis_descripcion",
+				"ventanilla/vista/vis_descripcion.php"
+			],
+			[
+				"vis_report_tipo_doc",
+				"ventanilla/vista/informes/vis_report_tipo_doc.php"
+			],
+			[
+				"vis_form_informe_entradas_salidas",
+				"ventanilla/vista/informes/vis_form_informe_entradas_salidas.php"
+			],
+			[
+				"detariesgo",
+				"meci_sige/application/views/informes/detariesgo.php"
+			],
+			[
+				"vista_modal_radicados_entrada",
+				"ventanilla/vista/vis_modal_radicados_entrada.php"
+			],
+			[
+				"vis_radicad_list_table",
+				"Dropbox/ventanilla/vista/vis_radicadoext_list_table.php"
+			],
+			[
+				"vis_entradaext_list_table",
+				"ventanilla/vista/vis_entradaext_list_table.php"
+			],
+			[
+				"vis_tipores",
+				"ventanilla/vista/vis_tipo_requerimiento_list.php"
+			],
+			[
+				"vis_personal_list",
+				"ventanilla/vista/personal/vis_personal_list.php"
+			],
+			[
+				"vis_personal_sel_todo",
+				"ventanilla/vista/personal/vis_personal_sel_todo.php"
+			],
+			[
+				"vis_personal_form_ciudadano",
+				"ventanilla/vista/personal/vis_personal_form_ciudadano.php"
+			],
+			[
+				"vis_revision_form",
+				"ventanilla/vista/vis_revision_form.php"
+			],
+			[
+				"vis_version_list_table",
+				"ventanilla/vista/version/vis_version_list_table.php"
+			],
+			[
+				"avancesmp",
+				"meci_sige/application/views/acuerdos/avancesmp.php"
+			],
+			[
+				"vis_entradaext_list",
+				"ventanilla/vista/vis_entradaext_list.php"
+			],
+			[
+				"analisisr",
+				"meci_sige/application/views/mapariesgos/analisisr.php"
+			],
+			[
+				"vis_revision_list_table",
+				"ventanilla/vista/vis_revision_list_table.php"
+			],
+			[
+				"vis_revision_list",
+				"Dropbox/ventanilla/vista/vis_revision_list.php"
+			],
+			[
+				"uikit_custom",
+				"meci_sige/assets/js/uikit_custom.js"
+			],
+			[
+				"kendoui_custom",
+				"meci_sige/assets/js/kendoui_custom.js"
+			],
+			[
+				"kendoui",
+				"meci_sige/assets/js/pages/kendoui.js"
+			],
+			[
+				"vis_report_dependencias_estado_finalizacion",
+				"ventanilla/vista/informes/vis_report_dependencias_estado_finalizacion.php"
+			],
+			[
+				"vis_tclase_tramite_list_table",
+				"ventanilla/vista/vis_tclase_tramite_list_table.php"
+			],
+			[
+				"vis_clase_tramite_list",
+				"ventanilla/vista/vis_clase_tramite_list.php"
+			],
+			[
+				"vis_entrada_form",
+				"ventanilla/vista/vis_entrada_form.php"
+			],
+			[
+				"/html/dist/components_common.html",
+				"ptros/admin/admin/html/dist/components_common.html"
+			],
+			[
+				"acciones",
+				"meci_sige/application/views/mapariesgos/accionesxexe.php"
+			],
+			[
+				"vis_entrada_list",
+				"Dropbox/ventanilla/vista/vis_entrada_list.php"
+			],
+			[
+				"ui-elements-buttons.html",
+				"ptros/pleasure/app/admin1/ui-elements-buttons.html"
+			],
+			[
+				"admin1/ui-elements-dialogs.html",
+				"ptros/pleasure/app/admin1/ui-elements-dialogs.html"
+			],
+			[
+				"kendoui.js",
+				"Dropbox/meci_sige/assets/js/pages/kendoui.js"
+			],
+			[
+				"pages/kendoui.js",
+				"meci_sige/assets/js/pages/kendoui.js"
+			],
+			[
+				"mapariesgos/accionesxexe",
+				"meci_sige/application/views/mapariesgos/accionesxexe.php"
+			],
+			[
+				"mapariesgos/analisisr",
+				"Dropbox/meci_sige/application/views/mapariesgos/analisisr.php"
+			],
+			[
+				"vis_control_version_form",
+				"ventanilla/vista/version/vis_control_version_form.php"
+			],
+			[
+				"vis_entrada_form_edit",
+				"meci/vista/vis_entrada_form_edit.php"
+			],
+			[
+				"add_edit_distri",
+				"Dropbox/ssifex/views/clientes/add_edit_distri.php"
+			],
+			[
+				"vis_tipo_doc_form",
+				"ventanilla/vista/vis_tipo_doc_form.php"
+			],
+			[
+				"detallemp",
+				"meci_sige/application/views/mapariesgos/detallemp.php"
+			],
+			[
+				"components_buttons.html",
+				"ptros/admin/admin/html/dist/components_buttons.html"
+			],
+			[
+				"orms-general.html",
+				"ptros/pleasure/app/admin1/forms-general.html"
+			],
+			[
+				"datatables_uikit",
+				"meci_sige/assets/js/custom/datatables_uikit.js"
+			],
+			[
+				"cards-image.html",
+				"ptros/pleasure/app/admin1/cards-image.html"
+			],
+			[
+				"datatables.tabletools.js",
+				"meci_sige/bower_components/datatables-tabletools/js/dataTables.tableTools.js"
+			],
+			[
+				"pts/charts-c3.js",
+				"Dropbox/diarios/scripts/charts-c3.js"
+			],
+			[
+				"/charts-c3.html",
+				"ptros/pleasure/app/admin1/charts-c3.html"
+			],
+			[
+				"/admin1/cards-image.html",
+				"ptros/pleasure/app/admin1/cards-image.html"
+			],
+			[
+				"pages/plugins_datatables",
+				"meci_sige/assets/js/pages/plugins_datatables.js"
+			],
+			[
+				"js/datatables.tabletools.js",
+				"meci_sige/bower_components/datatables-tabletools/js/dataTables.tableTools.js"
+			],
+			[
+				"/plugins_datatables.html",
+				"ptros/admin/admin/html/dist/plugins_datatables.html"
+			],
+			[
+				"/dist/components_modal.html",
+				"ptros/admin/admin/html/dist/components_modal.html"
+			],
+			[
+				"/admin1/forms-custom-file-input.html",
+				"ptros/pleasure/app/admin1/forms-custom-file-input.html"
+			],
+			[
+				"forms-layouts.html",
+				"ptros/pleasure/app/admin1/forms-layouts.html"
+			],
+			[
+				"/forms-general.html",
+				"ptros/pleasure/app/admin1/forms-general.html"
+			],
+			[
+				"/admin1/ui-elements-dialogs.html",
+				"ptros/pleasure/app/admin1/ui-elements-dialogs.html"
+			],
+			[
+				"/ui-elements-buttons.html",
+				"ptros/pleasure/app/admin1/ui-elements-buttons.html"
+			],
+			[
+				"scripts/tables-datatables.js",
+				"caaes/assets/globals/scripts/tables-datatables.js"
+			],
+			[
+				"/admin1/table-datatables.html",
+				"ptros/pleasure/app/admin1/table-datatables.html"
+			],
+			[
+				"dist/components_dropdowns.html",
+				"ptros/admin/admin/html/dist/components_dropdowns.html"
+			],
+			[
+				"forms_regular.html",
+				"ptros/admin/admin/html/dist/forms_regular.html"
+			],
+			[
+				"html/dist/components_tooltips.html",
+				"ptros/admin/admin/html/dist/components_tooltips.html"
+			],
+			[
+				"html/dist/forms_regular.html",
+				"ptros/admin/admin/html/dist/forms_regular.html"
+			],
+			[
+				"plugins_gantt_chart",
+				"meci_sige/assets/js/pages/plugins_gantt_chart.js"
+			],
+			[
+				"pages/forms_advanced",
+				"meci_sige/assets/js/pages/forms_advanced.js"
+			],
+			[
+				"dist/forms_advanced.html",
+				"ptros/admin/admin/html/dist/forms_advanced.html"
+			],
+			[
+				"/forms_regular.html",
+				"ptros/admin/admin/html/dist/forms_regular.html"
+			],
+			[
+				"html/dist/kendoui_masked_input.html",
+				"ptros/admin/admin/html/dist/kendoui_masked_input.html"
+			],
+			[
+				"plugins_crud_table.html",
+				"proyectos_desarrollo/admin/admin/html/dist/plugins_crud_table.html"
+			],
+			[
+				"plugins_crud_tabl",
+				"meci_sige/assets/js/pages/plugins_crud_table.js"
+			],
+			[
+				"components_tooltips.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_tooltips.html"
+			],
+			[
+				"ecommerce_product_details.html",
+				"proyectos_desarrollo/admin/admin/html/dist/ecommerce_product_details.html"
+			],
+			[
+				"t/components_tables.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_tables.html"
+			],
+			[
+				"components_grid.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_grid.html"
+			],
+			[
+				"components_tabs.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_tabs.html"
+			],
+			[
+				"assets/js/custom/gantt_chart.min",
+				"meci_sige/assets/js/custom/gantt_chart.min.js"
+			],
+			[
+				"gantt",
+				"meci_sige/assets/js/custom/gantt_chart.min.js"
+			],
+			[
+				"gantt_chart",
+				"meci_sige/assets/js/custom/gantt_chart.js"
+			],
+			[
+				"main.cs",
+				"meci_sige/assets/css/main.css"
+			],
+			[
+				"main.c",
+				"meci_sige/assets/css/main.min.css"
+			],
+			[
+				"dist/error_500.html",
+				"proyectos_desarrollo/admin/admin/html/dist/error_500.html"
+			],
+			[
+				"page_user_profile.html",
+				"proyectos_desarrollo/admin/admin/html/dist/page_user_profile.html"
+			],
+			[
+				"/page_user_profile.html",
+				"proyectos_desarrollo/admin/admin/html/dist/page_user_profile.html"
+			],
+			[
+				"admin/html/dist/index.html",
+				"proyectos_desarrollo/admin/admin/html/dist/index.html"
+			],
+			[
+				"altair_admin_common",
+				"meci_sige/assets/js/altair_admin_common.js"
+			],
+			[
+				"common.min.js",
+				"meci_sige/assets/js/common.min.js"
+			],
+			[
+				"uikit_custom.min.js",
+				"meci_sige/assets/js/uikit_custom.min.js"
+			],
+			[
+				"components_lists.html",
+				"ptros/admin/admin/html/dist/components_lists.html"
+			],
+			[
+				"kendoui_datepicker.html",
+				"proyectos_desarrollo/admin/admin/html/dist/kendoui_datepicker.html"
+			],
+			[
+				"components_accordion.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_accordion.html"
+			],
+			[
+				"components_cards.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_cards.html"
+			],
+			[
+				"ayout_top_menu.html",
+				"proyectos_desarrollo/admin/admin/html/dist/layout_top_menu.html"
+			],
+			[
+				"gantt_chart.min.js",
+				"meci_sige/assets/js/custom/gantt_chart.min.js"
+			],
+			[
+				"pages/dashboard",
+				"meci_sige/assets/js/pages/dashboard.js"
+			],
+			[
+				"kendo.culture.es",
+				"proyectos_desarrollo/admin/admin/angular/bower_components/kendo-ui/js/cultures/kendo.culture.es-ES.min.js"
+			],
+			[
+				"forms_advanced",
+				"meci_sige/assets/js/pages/forms_advanced.js"
+			],
+			[
+				"gantt_chart.min",
+				"meci_sige/assets/js/custom/gantt_chart.min.js"
+			],
+			[
+				"js/common",
+				"meci_sige/assets/js/common.js"
+			],
+			[
+				"page_user_edit",
+				"meci_sige/assets/js/pages/page_user_edit.js"
+			],
+			[
+				"page_user_edit.html",
+				"proyectos_desarrollo/admin/admin/html/dist/page_user_edit.html"
+			],
+			[
+				"forms_advanced.html",
+				"proyectos_desarrollo/admin/admin/html/dist/forms_advanced.html"
+			],
+			[
+				"dist/components_tabs.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_tabs.html"
+			],
+			[
+				"global/vis_sel_ks.php",
+				"gestion_documental/app/vista/global/vis_sel_ks.php"
+			],
+			[
+				"kui_users_data",
+				"proyectos_desarrollo/admin/admin/angular/data/kUI_users_data.json"
+			],
+			[
+				"plugins_tree",
+				"meci_sige/assets/js/pages/plugins_tree.js"
+			],
+			[
+				"plugins_tree.html",
+				"proyectos_desarrollo/admin/admin/html/dist/plugins_tree.html"
+			],
+			[
+				"data/kui_users_data.min.json",
+				"proyectos_desarrollo/admin/admin/angular/data/kUI_users_data.min.json"
+			],
+			[
+				"uikit_fileinput",
+				"meci_sige/assets/js/custom/uikit_fileinput.js"
+			],
+			[
+				"formavanc",
+				"proyectos_desarrollo/admin/admin/html/dist/forms_advanced.html"
+			],
+			[
+				"componente/vis_requisito.php",
+				"meci/vista/componente/vis_requisito.php"
+			],
+			[
+				"jquery.easytree",
+				"meci_sige/assets/js/custom/easytree/jquery.easytree.js"
+			],
+			[
+				"dist/plugins_tree.html",
+				"proyectos_desarrollo/admin/admin/html/dist/plugins_tree.html"
+			],
+			[
+				"dist/page_user_edi",
+				"proyectos_desarrollo/admin/admin/html/dist/assets/js/pages/page_user_edit.js"
+			],
+			[
+				"dist/page_user_edit.html",
+				"proyectos_desarrollo/admin/admin/html/dist/page_user_edit.html"
+			],
+			[
+				"custom_inpu",
+				"ptros/admin/admin/angular/assets/js/custom/uikit_fileinput.js"
+			],
+			[
+				"endoui_custom",
+				"meci_sige/assets/js/kendoui_custom.js"
+			],
+			[
+				"kendoui_masked_input.html",
+				"proyectos_desarrollo/admin/admin/html/dist/kendoui_masked_input.html"
+			],
+			[
+				"form_personas",
+				"meci_sige/application/views/funcionarios/form_personas.php"
+			],
+			[
+				"tablaapps",
+				"meci_sige/application/views/configuracion/tablaapps.php"
+			],
+			[
+				"form_procesos",
+				"meci_sige/application/views/funcionarios/form_procesos.php"
+			],
+			[
+				"plugins_datatables",
+				"meci_sige/assets/js/pages/plugins_datatables.js"
+			],
+			[
+				"form_areas",
+				"meci_sige/application/views/funcionarios/form_areas.php"
+			],
+			[
+				"/components_buttons.html",
+				"proyectos_desarrollo/admin/admin/html/dist/components_buttons.html"
+			],
+			[
+				"preloa",
+				"meci_sige/assets/js/pages/components_preloaders.js"
+			],
+			[
+				"main.css",
+				"meci_sige/assets/css/main.css"
+			],
+			[
+				"assets/css/main.css",
+				"meci_sige/assets/css/main.css"
+			],
+			[
+				"ssifex_",
+				"proyectos_desarrollo/casino/application/models/Ssifex_model.php"
+			],
+			[
+				"ssifex",
+				"proyectos_desarrollo/casino/application/controllers/Ssifex.php"
+			],
+			[
+				"components_modal.html",
+				"ptros/admin/admin/html/dist/components_modal.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
