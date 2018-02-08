@@ -32,11 +32,12 @@
 
 //Envio de mail by skinatech
 
-session_start();
-error_reporting(7);
-$ruta_raiz = "..";
-define('ADODB_ASSOC_CASE', 0);
-echo $nombre=utf8_decode($nombre);
+//session_start();
+//error_reporting(7);
+//$ruta_raiz = "..";
+//define('ADODB_ASSOC_CASE', 0);
+echo $nombre=$_GET['nombre'];
+echo $nombre2=utf8_decode($nombre);
  
 // include_once "../include/db/ConnectionHandler.php";
 // include_once($ruta_raiz."/include/PHPMailer/class.phpmailer.php");
