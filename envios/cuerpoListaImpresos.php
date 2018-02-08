@@ -43,7 +43,7 @@ $codusuario = $_SESSION["codusuario"];
 $tip3Nombre = $_SESSION["tip3Nombre"];
 $tip3desc = $_SESSION["tip3desc"];
 $tip3img = $_SESSION["tip3img"];
-
+$cancelarAnular =false;
 if ($_GET["carpeta"])
     $carpeta = $_GET["carpeta"];
 $tipo_carpt = $_GET["tipo_carpt"];
