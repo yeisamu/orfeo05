@@ -26,7 +26,7 @@ if ($db) {
 
     switch ($_POST['btn_accion']) {
         Case 'Agregar': {
-                $sqlInsert = "insert into sgd_noh_nohabiles(noh_fecha)values(" . $db->conn->DBDate($fecha_sel) . ")";
+               echo $sqlInsert = "insert into sgd_noh_nohabiles(noh_fecha)values(" . $db->conn->DBDate($fecha_sel) . ")";
                 $ok = $db->conn->Execute($sqlInsert);
                 $ok ? $error = 1 : $error = 2;
             }break;

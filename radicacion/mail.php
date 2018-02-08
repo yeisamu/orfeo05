@@ -32,90 +32,6 @@
 
 //Envio de mail by skinatech
 
-<<<<<<< HEAD
-//session_start();
-//error_reporting(7);
-//$ruta_raiz = "..";
-//define('ADODB_ASSOC_CASE', 0);
-echo $nombre=$_GET['nombre'];
-echo $nombre2=utf8_decode($nombre);
- 
-// include_once "../include/db/ConnectionHandler.php";
-// include_once($ruta_raiz."/include/PHPMailer/class.phpmailer.php");
-// include_once($ruta_raiz."/config.php");
-
-// $db = new ConnectionHandler("$ruta_raiz");
-// $mail = new PHPMailer();
-
-// $tx=$_GET['tx'];
-// $codusu=$_GET['codusu'];
-// $verrad=$_GET['verrad'];
-// $asunto=$_GET['asunto'];
-// $asunto=utf8_decode($asunto);
-// $nombre=$_GET['nombre'];
-// $nombre=utf8_decode($nombre);
-// $apellido=$_GET['apellido'];
-// $apellido=utf8_decode($apellido);
-// $krd=$_SESSION['krd'];
-// //$db->conn->debug=true;
-// if ($tx!='Radicado')
-// {
-// 	if($tx=='Reasignado' or $tx=='Informado'){
-//                 $nombre=$krd;
-//                 $apellido=$depe_nomb;
-// 		$where="USUA_NOMB='$usunom'";
-//                                 }
-
-// 	if($tx=='Devuelto'){
-//                 $nombre=$krd;
-//                 $apellido=$depe_nomb;
-//                 //$where=" USUA_LOGIN='$usunom'";
-//                 $where=" USUA_NOMB='$usunom'";//modificado  skina para enviar correo devueltos
-//                 }
-
-// 	$sql="SELECT USUA_CODI,DEPE_CODI  FROM USUARIO WHERE $where";
-// 	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-// 	$rs=$db->conn->query($sql);
-// 	$codusu=$rs->fields["usua_codi"];
-// 	$depemail=$rs->fields["depe_codi"];
-// 	}
-// else
-// {
-// 	$sql='SELECT RADI_DEPE_ACTU  as "DEPENDENCIA" FROM RADICADO WHERE RADI_NUME_RADI=\''.$verrad."'";
-// 	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-// 	$rs=$db->conn->query($sql);
-// 	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-// 	$depemail=$rs->fields["dependencia"];
-// }
-// //echo " codusu $codusu DEPEN $depemail usus $usunom asunto:  $asunto Rad $verrad radi $radi_nume";
-
-// $sql="SELECT USUA_EMAIL FROM USUARIO WHERE USUA_CODI=$codusu AND DEPE_CODI='$depemail'";
-// $db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-// $rs=$db->conn->query($sql);
-// echo $mail_usu=$rs->fields["usua_email"];
-
-// //SE VERIFICA SI ES EMAIL
-//     $mail_correcto = 0;
-//     //compruebo unas cosas primeras
-//     if ((strlen($mail_usu) >= 6) && (substr_count($mail_usu,"@") == 1) && (substr($mail_usu,0,1) != "@") && (substr($mail_usu,strlen($mail_usu)-1,1) != "@")){
-//        if ((!strstr($mail_usu,"'")) && (!strstr($mail_usu,"\"")) && (!strstr($mail_usu,"\\")) && (!strstr($mail_usu,"\$")) && (!strstr($mail_usu," "))) {
-//           //miro si tiene caracter .
-//           if (substr_count($mail_usu,".")>= 1){
-//              //obtengo la terminacion del dominio
-//              $term_dom = substr(strrchr ($mail_usu, '.'),1);
-//              //compruebo que la terminación del dominio sea correcta
-//              if (strlen($term_dom)>1 && strlen($term_dom)<5 && (!strstr($term_dom,"@")) ){
-//                 //compruebo que lo de antes del dominio sea correcto
-//                 $antes_dom = substr($mail_usu,0,strlen($mail_usu) - strlen($term_dom) - 1);
-//                 $caracter_ult = substr($antes_dom,strlen($antes_dom)-1,1);
-//                 if ($caracter_ult != "@" && $caracter_ult != "."){
-//                    $mail_correcto = 1;
-//                 }
-//              }
-//           }
-//        }
-//     }
-=======
 session_start();
 error_reporting(7);
 $ruta_raiz = "..";
@@ -195,9 +111,6 @@ $mail_usu=$rs->fields["usua_email"];
           }
        }
     }
->>>>>>> b3c9a6764aa75a32ce2fddac2e1c674972e058c2
- 
-
 if($mail==' ' or $mail_correcto==0)
 	{
   echo "No se pudo enviar notificacion, el usuario no tiene correo electronico o tiene un formato incorrecto, comuniquese con el administrador del sistema";
