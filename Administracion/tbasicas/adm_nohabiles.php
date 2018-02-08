@@ -26,12 +26,12 @@ if ($db) {
 
     switch ($_POST['btn_accion']) {
         Case 'Agregar': {
-               echo $sqlInsert = "insert into sgd_noh_nohabiles(noh_fecha)values(" . $db->conn->DBDate($_POST['fecha_sel']) . ")";
+                $sqlInsert = "insert into sgd_noh_nohabiles(noh_fecha)values(" . $db->conn->DBDate($_POST['fecha_sel']) . ")";
                 $ok = $db->conn->Execute($sqlInsert);
                 $ok ? $error = 1 : $error = 2;
             }break;
         Case 'Borrar': {
-                $tmp_val = implode("','", $noh_fecha);
+                $tmp_val = implode("','", $_POST['noh_fecha']);
                 $sqlBorra = "delete from sgd_noh_nohabiles where noh_fecha in ('$tmp_val')";
                 $ok = $db->conn->Execute($sqlBorra);
                 $ok ? $error = 3 : $error = 4;
@@ -75,7 +75,7 @@ switch ($error) {
 
 if (!($fecha_sel))
     $fecha_sel = date("Y-m-d");
-for ($i = 2007; $i <= 2018; $i++) {
+for ($i = 2010; $i <= 2022; $i++) {
     $sel = ($_POST['slc_anio'] == $i) ? "selected" : "";
     $filtro .= "<option value='$i' $sel>$i</option>";
 }
