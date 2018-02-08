@@ -9,9 +9,14 @@
 
 session_start();
 
-if (isset($_POST['krd'])) $krd = $_POST['krd']; if (isset($_GET['krd'])) $krd = $_GET['krd'];
+if (isset($_POST['krd'])) $krd = $_POST['krd']; 
+if (isset($_GET['krd'])) $krd = $_GET['krd'];
 $ruta_raiz="../..";
-if(!isset($_SESSION['dependencia']))	include "$ruta_raiz/rec_session.php";
+if(!isset($_SESSION['dependencia'])){
+
+}	
+
+include "$ruta_raiz/rec_session.php";
 
 require_once("$ruta_raiz/include/db/ConnectionHandler.php");
 $db = new ConnectionHandler($ruta_raiz);
