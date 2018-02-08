@@ -88,7 +88,7 @@ switch($db->driver)
 		        ';
 		break;
 	default:
-		$isql = 'select 
+	echo	$isql = 'select 
 			a.anex_estado AS "CHU_ESTADO"
 		 	,a.sgd_deve_codigo AS "HID_DEVE_CODIGO"
 			,a.sgd_deve_fech AS "HID_SGD_DEVE_FECH" 
