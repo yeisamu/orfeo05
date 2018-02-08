@@ -36,59 +36,61 @@ session_start();
 error_reporting(7);
 $ruta_raiz = "..";
 define('ADODB_ASSOC_CASE', 0);
-include_once "../include/db/ConnectionHandler.php";
-include_once($ruta_raiz."/include/PHPMailer/class.phpmailer.php");
-include_once($ruta_raiz."/config.php");
+echo $nombre=utf8_decode($nombre);
+ 
+// include_once "../include/db/ConnectionHandler.php";
+// include_once($ruta_raiz."/include/PHPMailer/class.phpmailer.php");
+// include_once($ruta_raiz."/config.php");
 
-$db = new ConnectionHandler("$ruta_raiz");
-$mail = new PHPMailer();
+// $db = new ConnectionHandler("$ruta_raiz");
+// $mail = new PHPMailer();
 
-$tx=$_GET['tx'];
-$codusu=$_GET['codusu'];
-$verrad=$_GET['verrad'];
-$asunto=$_GET['asunto'];
-$asunto=utf8_decode($asunto);
-$nombre=$_GET['nombre'];
-$nombre=utf8_decode($nombre);
-$apellido=$_GET['apellido'];
-$apellido=utf8_decode($apellido);
-$krd=$_SESSION['krd'];
-//$db->conn->debug=true;
-if ($tx!='Radicado')
-{
-	if($tx=='Reasignado' or $tx=='Informado'){
-                $nombre=$krd;
-                $apellido=$depe_nomb;
-		$where="USUA_NOMB='$usunom'";
-                                }
+// $tx=$_GET['tx'];
+// $codusu=$_GET['codusu'];
+// $verrad=$_GET['verrad'];
+// $asunto=$_GET['asunto'];
+// $asunto=utf8_decode($asunto);
+// $nombre=$_GET['nombre'];
+// $nombre=utf8_decode($nombre);
+// $apellido=$_GET['apellido'];
+// $apellido=utf8_decode($apellido);
+// $krd=$_SESSION['krd'];
+// //$db->conn->debug=true;
+// if ($tx!='Radicado')
+// {
+// 	if($tx=='Reasignado' or $tx=='Informado'){
+//                 $nombre=$krd;
+//                 $apellido=$depe_nomb;
+// 		$where="USUA_NOMB='$usunom'";
+//                                 }
 
-	if($tx=='Devuelto'){
-                $nombre=$krd;
-                $apellido=$depe_nomb;
-                //$where=" USUA_LOGIN='$usunom'";
-                $where=" USUA_NOMB='$usunom'";//modificado  skina para enviar correo devueltos
-                }
+// 	if($tx=='Devuelto'){
+//                 $nombre=$krd;
+//                 $apellido=$depe_nomb;
+//                 //$where=" USUA_LOGIN='$usunom'";
+//                 $where=" USUA_NOMB='$usunom'";//modificado  skina para enviar correo devueltos
+//                 }
 
-	$sql="SELECT USUA_CODI,DEPE_CODI  FROM USUARIO WHERE $where";
-	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-	$rs=$db->conn->query($sql);
-	$codusu=$rs->fields["usua_codi"];
-	$depemail=$rs->fields["depe_codi"];
-	}
-else
-{
-	$sql='SELECT RADI_DEPE_ACTU  as "DEPENDENCIA" FROM RADICADO WHERE RADI_NUME_RADI=\''.$verrad."'";
-	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-	$rs=$db->conn->query($sql);
-	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-	$depemail=$rs->fields["dependencia"];
-}
-//echo " codusu $codusu DEPEN $depemail usus $usunom asunto:  $asunto Rad $verrad radi $radi_nume";
+// 	$sql="SELECT USUA_CODI,DEPE_CODI  FROM USUARIO WHERE $where";
+// 	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+// 	$rs=$db->conn->query($sql);
+// 	$codusu=$rs->fields["usua_codi"];
+// 	$depemail=$rs->fields["depe_codi"];
+// 	}
+// else
+// {
+// 	$sql='SELECT RADI_DEPE_ACTU  as "DEPENDENCIA" FROM RADICADO WHERE RADI_NUME_RADI=\''.$verrad."'";
+// 	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+// 	$rs=$db->conn->query($sql);
+// 	$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+// 	$depemail=$rs->fields["dependencia"];
+// }
+// //echo " codusu $codusu DEPEN $depemail usus $usunom asunto:  $asunto Rad $verrad radi $radi_nume";
 
-$sql="SELECT USUA_EMAIL FROM USUARIO WHERE USUA_CODI=$codusu AND DEPE_CODI='$depemail'";
-$db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-$rs=$db->conn->query($sql);
-echo $mail_usu=$rs->fields["usua_email"];
+// $sql="SELECT USUA_EMAIL FROM USUARIO WHERE USUA_CODI=$codusu AND DEPE_CODI='$depemail'";
+// $db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
+// $rs=$db->conn->query($sql);
+// echo $mail_usu=$rs->fields["usua_email"];
 
 // //SE VERIFICA SI ES EMAIL
 //     $mail_correcto = 0;
