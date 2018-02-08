@@ -112,8 +112,8 @@ function ocultar(nombreCapa)
 var contadorVentanas=0
 <?
 if($verradPermisos == "Full" or $datoVer=="985")
-{	if($datoVer=="985")
-	{
+{	//if($datoVer=="985")
+	//{
 ?>
 function  window_onload(){
             <?
@@ -123,9 +123,9 @@ function  window_onload(){
                 <?
             }
             ?>
-        }
+       }
             <?
-        }
+      //  }
         ?>
 </script>
 

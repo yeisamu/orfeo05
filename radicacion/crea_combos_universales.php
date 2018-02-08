@@ -112,17 +112,19 @@ unset($sql_continentes);
 			FROM SGD_DEF_PAISES, SGD_DEF_CONTINENTES WHERE SGD_DEF_PAISES.ID_CONT = SGD_DEF_CONTINENTES.ID_CONT
 			GROUP BY SGD_DEF_PAISES.NOMBRE_PAIS, SGD_DEF_PAISES.ID_CONT, SGD_DEF_PAISES.ID_PAIS
 			ORDER BY SGD_DEF_PAISES.NOMBRE_PAIS";*/
-$sql_pais = "SELECT ID_PAIS AS ID1, NOMBRE_PAIS AS NOMBRE, ID_CONT AS ID0 
+$sql_pais = "SELECT ID_PAIS AS id1, NOMBRE_PAIS AS nombre, ID_CONT AS id0 
 	FROM SGD_DEF_PAISES 
         ORDER BY SGD_DEF_PAISES.NOMBRE_PAIS";
 $Rs_pais = $db->conn->CacheExecute(15,$sql_pais);
 //$Rs_pais = $db->conn->query($sql_pais);
 if ($Rs_pais)
-{   /*$vpaises = $db->conn->CacheGetAssoc($sql_pais,$inputarr=false,$force_array=false,$first2cols=false);
+{  
+//echo "sql_pais";
+ /*$vpaises = $db->conn->CacheGetAssoc($sql_pais,$inputarr=false,$force_array=false,$first2cols=false);
 	//$vpaisesk = array_keys($vpaises);
         //$vpaisesv = array_values($vpaises);
 	foreach ($vpaisesk as $vpk) 
-	{	$vpaisesv[$idx]['ID1'] = $vpk;
+	{	$vpaisesv[$idx]['id1'] = $vpk;
 		$idx += 1;
 	}
 	
@@ -140,11 +142,12 @@ if ($Rs_pais)
 	unset($vpaisesvtmp);*/
 	$vpaisesv = array();
 	$idx=0;
+	//print_r($Rs_pais);
 	while (!$Rs_pais->EOF)
 	{
-		$vpaisesv[$idx]['ID1'] = $Rs_pais->fields['id1'];
-		$vpaisesv[$idx]['NOMBRE'] = $Rs_pais->fields['nombre'];
-		$vpaisesv[$idx]['ID0'] = $Rs_pais->fields['id0'];
+	        $vpaisesv[$idx]['ID1'] = $Rs_pais->fields['ID1'];
+		$vpaisesv[$idx]['NOMBRE'] = $Rs_pais->fields['NOMBRE'];
+	  	$vpaisesv[$idx]['ID0'] = $Rs_pais->fields['ID0'];
 		$idx += 1;
 		$Rs_pais->MoveNext();
 	}       
@@ -156,7 +159,7 @@ $Rs_pais->Move(0);
 //Se modifica el RTRIM para Postgres 8.3
 //$cad = $db->conn->Concat("RTRIM(DEPARTAMENTO.ID_PAIS)","'-'","RTRIM(DEPARTAMENTO.DPTO_CODI)");
 $cad = $db->conn->Concat("(DEPARTAMENTO.ID_PAIS)","'-'","(DEPARTAMENTO.DPTO_CODI)");
-$sql_dpto="SELECT $cad AS ID1, DEPARTAMENTO.DPTO_NOMB AS NOMBRE, DEPARTAMENTO.ID_PAIS AS ID0
+$sql_dpto="SELECT $cad AS id1, DEPARTAMENTO.DPTO_NOMB AS nombre, DEPARTAMENTO.ID_PAIS AS id0
 			FROM DEPARTAMENTO, SGD_DEF_PAISES
 			WHERE DEPARTAMENTO.ID_PAIS = SGD_DEF_PAISES.ID_PAIS
 			GROUP BY $cad, DEPARTAMENTO.DPTO_NOMB, DEPARTAMENTO.ID_PAIS
@@ -168,9 +171,9 @@ if ($Rs_dpto)
 	$vdptosv = array();
 	while (!$Rs_dpto->EOF)
 	{	
-		$vdptosv[$it]['ID1'] = $Rs_dpto->fields['id1'];
-		$vdptosv[$it]['NOMBRE'] = $Rs_dpto->fields['nombre'];
-		$vdptosv[$it]['ID0'] = $Rs_dpto->fields['id0'];
+		$vdptosv[$it]['ID1'] = $Rs_dpto->fields['ID1'];
+		$vdptosv[$it]['NOMBRE'] = $Rs_dpto->fields['NOMBRE'];
+		$vdptosv[$it]['ID0'] = $Rs_dpto->fields['ID0'];
 		$it += 1;
 		$Rs_dpto->MoveNext();
 }	}
@@ -195,10 +198,10 @@ if ($Rs_mcpo)
 	$vmcposv = array();
 	while (!$Rs_mcpo->EOF)
 	{	
-		$vmcposv[$it]['ID1'] = $Rs_mcpo->fields['id1'];
-		$vmcposv[$it]['NOMBRE'] = trim($Rs_mcpo->fields['nombre']);
-		$vmcposv[$it]['ID0'] = $Rs_mcpo->fields['id0'];
-		$vmcposv[$it]['ID'] = $Rs_mcpo->fields['id'];
+		$vmcposv[$it]['ID1'] = $Rs_mcpo->fields['ID1'];
+		$vmcposv[$it]['NOMBRE'] = trim($Rs_mcpo->fields['NOMBRE']);
+		$vmcposv[$it]['ID0'] = $Rs_mcpo->fields['ID0'];
+		$vmcposv[$it]['ID'] = $Rs_mcpo->fields['ID'];
 		$vmcposv[$it]['HOMO_MCPIO'] = $Rs_mcpo->fields['homologa_muni'];
 		$vmcposv[$it]['HOMO_IDMCPIO'] = trim($Rs_mcpo->fields['homologa_idmuni']);
 		$it += 1;

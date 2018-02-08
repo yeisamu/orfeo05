@@ -362,6 +362,7 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 
 
 // Convertimos los vectores de los paises, dptos y municipios creados en crea_combos_universales.php a vectores en JavaScript.
+//print_r($vpaisesv);
 echo arrayToJsArray($vpaisesv, 'vp');
 echo arrayToJsArray($vdptosv, 'vd');
 echo arrayToJsArray($vmcposv, 'vm');
@@ -1511,11 +1512,17 @@ if(!$titulo)  $titulo = "?? $i";
                 <td  colspan="2" bgcolor="#FFFFFF"  class="listado2">
     <?php
     //	Visualizamos el combo de paises.
-    echo "<SELECT NAME=\"idpais$i\" ID=\"idpais$i\" TITLE=\"Lista desplegable con paises, cambia automaticamente una vez el nombre o suscriptor es consultado\" CLASS=\"select\" onchange=\"cambia(this.form, 'codep_us$i', 'idpais$i')\">";
+   //print_r($Rs_pais);
+  //echo $contcodi;
+  //echo $Submit4; 
+   echo "<SELECT NAME=\"idpais$i\" ID=\"idpais$i\" TITLE=\"Lista desplegable con paises, cambia automaticamente una vez el nombre o suscriptor es consultado\" CLASS=\"select\" onchange=\"cambia(this.form, 'codep_us$i', 'idpais$i')\">";
     while (!$Rs_pais->EOF and ( !$Submit4)) {
-        if ($Rs_pais->fields['id0'] == $contcodi) { //Si hay local Y pais pertenece al continente.
-            ($paiscodi == $Rs_pais->fields['id1']) ? $s = " selected='selected'" : $s = "";
-            echo "<option" . $s . " value='" . $Rs_pais->fields['id1'] . "'>" . $Rs_pais->fields['nombre'] . "</option>";
+  //     echo "entro";
+    //   echo $Rs_pais->fields['ID1'];
+//	echo $Rs_pais->fields['nombre'];
+     if ($Rs_pais->fields['ID0'] == $contcodi) { //Si hay local Y pais pertenece al continente.
+            ($paiscodi == $Rs_pais->fields['ID1']) ? $s = " selected='selected'" : $s = "";
+            echo "<option" . $s . " value='" . $Rs_pais->fields['ID1'] . "'>" . $Rs_pais->fields['NOMBRE'] . "</option>";
         }
         //var_dump($Rs_pais);
         $Rs_pais->MoveNext();
@@ -1531,9 +1538,9 @@ if(!$titulo)  $titulo = "?? $i";
     <?php
     echo "<SELECT NAME=\"codep_us$i\" ID=\"codep_us$i\" CLASS=\"select\" TITLE=\"Lista desplegable con departamentos, cambia automaticamente una vez el nombre o el suscriptor es consultado\" onchange=\"cambia(this.form, 'muni_us$i', 'codep_us$i')\">";
     while (!$Rs_dpto->EOF and ( !$Submit4)) {
-        if ($Rs_dpto->fields['id0'] == $paiscodi) { //Si hay local Y dpto pertenece al pais.
-            ($deptocodi == $Rs_dpto->fields['id1']) ? $s = " selected='selected'" : $s = "";
-            echo "<option" . $s . " value='" . $Rs_dpto->fields['id1'] . "'>" . $Rs_dpto->fields['nombre'] . "</option>";
+        if ($Rs_dpto->fields['ID0'] == $paiscodi) { //Si hay local Y dpto pertenece al pais.
+            ($deptocodi == $Rs_dpto->fields['ID1']) ? $s = " selected='selected'" : $s = "";
+            echo "<option" . $s . " value='" . $Rs_dpto->fields['ID1'] . "'>" . $Rs_dpto->fields['NOMBRE'] . "</option>";
         }
         $Rs_dpto->MoveNext();
     }
@@ -1548,8 +1555,8 @@ if(!$titulo)  $titulo = "?? $i";
     echo "<SELECT NAME=\"muni_us$i\" ID=\"muni_us$i\" TITLE=\"Lista desplegable con municipios, cambia automaticamente una vez el nombre o el suscriptor es consultado\" CLASS=\"select\">";
     while (!$Rs_mcpo->EOF and ( !$Submit4)) {
         if ($_SESSION['cod_local']) { //Si hay local
-            ($municodi == $Rs_mcpo->fields['id1']) ? $s = " selected='selected'" : $s = "";
-            echo "<option" . $s . " value='" . $Rs_mcpo->fields['id1'] . "'>" . $Rs_mcpo->fields['nombre'] . "</option>";
+            ($municodi == $Rs_mcpo->fields['ID1']) ? $s = " selected='selected'" : $s = "";
+            echo "<option" . $s . " value='" . $Rs_mcpo->fields['ID1'] . "'>" . $Rs_mcpo->fields['NOMBRE'] . "</option>";
         }
         $Rs_mcpo->MoveNext();
     }
