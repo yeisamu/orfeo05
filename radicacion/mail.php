@@ -90,27 +90,27 @@ $db->conn->SetFetchMode(ADODB_FETCH_ASSOC);
 $rs=$db->conn->query($sql);
 echo $mail_usu=$rs->fields["usua_email"];
 
-//SE VERIFICA SI ES EMAIL
-    $mail_correcto = 0;
-    //compruebo unas cosas primeras
-    if ((strlen($mail_usu) >= 6) && (substr_count($mail_usu,"@") == 1) && (substr($mail_usu,0,1) != "@") && (substr($mail_usu,strlen($mail_usu)-1,1) != "@")){
-       if ((!strstr($mail_usu,"'")) && (!strstr($mail_usu,"\"")) && (!strstr($mail_usu,"\\")) && (!strstr($mail_usu,"\$")) && (!strstr($mail_usu," "))) {
-          //miro si tiene caracter .
-          if (substr_count($mail_usu,".")>= 1){
-             //obtengo la terminacion del dominio
-             $term_dom = substr(strrchr ($mail_usu, '.'),1);
-             //compruebo que la terminación del dominio sea correcta
-             if (strlen($term_dom)>1 && strlen($term_dom)<5 && (!strstr($term_dom,"@")) ){
-                //compruebo que lo de antes del dominio sea correcto
-                $antes_dom = substr($mail_usu,0,strlen($mail_usu) - strlen($term_dom) - 1);
-                $caracter_ult = substr($antes_dom,strlen($antes_dom)-1,1);
-                if ($caracter_ult != "@" && $caracter_ult != "."){
-                   $mail_correcto = 1;
-                }
-             }
-          }
-       }
-    }
+// //SE VERIFICA SI ES EMAIL
+//     $mail_correcto = 0;
+//     //compruebo unas cosas primeras
+//     if ((strlen($mail_usu) >= 6) && (substr_count($mail_usu,"@") == 1) && (substr($mail_usu,0,1) != "@") && (substr($mail_usu,strlen($mail_usu)-1,1) != "@")){
+//        if ((!strstr($mail_usu,"'")) && (!strstr($mail_usu,"\"")) && (!strstr($mail_usu,"\\")) && (!strstr($mail_usu,"\$")) && (!strstr($mail_usu," "))) {
+//           //miro si tiene caracter .
+//           if (substr_count($mail_usu,".")>= 1){
+//              //obtengo la terminacion del dominio
+//              $term_dom = substr(strrchr ($mail_usu, '.'),1);
+//              //compruebo que la terminación del dominio sea correcta
+//              if (strlen($term_dom)>1 && strlen($term_dom)<5 && (!strstr($term_dom,"@")) ){
+//                 //compruebo que lo de antes del dominio sea correcto
+//                 $antes_dom = substr($mail_usu,0,strlen($mail_usu) - strlen($term_dom) - 1);
+//                 $caracter_ult = substr($antes_dom,strlen($antes_dom)-1,1);
+//                 if ($caracter_ult != "@" && $caracter_ult != "."){
+//                    $mail_correcto = 1;
+//                 }
+//              }
+//           }
+//        }
+//     }
  
 
 // if($mail==' ' or $mail_correcto==0)
