@@ -134,8 +134,10 @@ $depeBuscada = $dep_sel;
             //Condicion Dependencia
             $dependencia_busq2 = " and c.radi_depe_radi = '$dep_sel'";
             //Construccion Condicion de Fechas//
-            $fecha_ini = $fecha_busq;
-            $fecha_fin = $fecha_busqH;
+            $fecha_ini = $_REQUEST['fecha_busq'];
+            $fecha_fin = $_REQUEST['fecha_busqH'];
+            $fecha_busq = $_REQUEST['fecha_busq'];
+            $fecha_busqH = $_REQUEST['fecha_busqH'];
             $fecha_ini = mktime($hora_ini, $minutos_ini, 00, substr($fecha_busq, 5, 2), substr($fecha_busq, 8, 2), substr($fecha_busq, 0, 4));
             $fecha_fin = mktime($hora_fin, $minutos_fin, 59, substr($fecha_busqH, 5, 2), substr($fecha_busqH, 8, 2), substr($fecha_busqH, 0, 4));
 
