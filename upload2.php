@@ -171,7 +171,7 @@ if(!$cc)
 		}else {
 			$expAnexo = null;
 		}
-		IF(!$anex_salida && $tpradic) $anex_salida=1;
+		if(!$anex_salida && $tpradic) $anex_salida=1;
 		$isql = "insert into anexos
 				(sgd_rem_destino,anex_radi_nume,anex_codigo,anex_tipo,anex_tamano   ,anex_solo_lect,anex_creador,anex_desc,anex_numero,anex_nomb_archivo   ,anex_borrado,anex_salida ,sgd_dir_tipo,anex_depe_creador,sgd_tpr_codigo,anex_fech_anex,SGD_APLI_CODI,SGD_TRAD_CODIGO, SGD_EXP_NUMERO)
 	           values ($radicado_rem  ,'$numrad'         ,'$codigo'    ,$tipo    ,$tamano     ,'$auxsololect','$krd'     ,'$descr' ,$auxnumero ,'$archivoconversion','N'         ,$anex_salida,$radicado_rem,'$dependencia',null,$sqlFechaHoy,        $aplinteg    ,$tpradic, '$expAnexo' ) ";
@@ -194,7 +194,7 @@ if(!$cc)
 		if ($subir_archivo)
 		{	
 			//include dirname(__FILE__).DIRECTORY_SEPARATOR.".".DIRECTORY_SEPARATOR."config.php";
-			$directorio="./bodega/".substr(trim($archivo),0,4)."/".strtoupper(substr(trim($archivo),4,$longitud_codigo_dependencia))."/docs/";
+		echo	$directorio="./bodega/".substr(trim($archivo),0,4)."/".strtoupper(substr(trim($archivo),4,$longitud_codigo_dependencia))."/docs/";
 			$userfile1_Temp = $_FILES['userfile1']['tmp_name'];
 			$bien2=move_uploaded_file($userfile1_Temp,$directorio.trim($archivoconversion));
 			if ($bien2)	//Si intento anexar archivo y Subio correctamente
