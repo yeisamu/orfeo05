@@ -101,7 +101,7 @@ function regresar(){
 			   {
 			     $tipVinDocto = 0 ;
 			   }
-			 $isqlM = "select * FROM RADICADO
+			echo $isqlM = "select * FROM RADICADO
 	                   where RADI_NUME_RADI = '$verrad'";
 	         $rsM=$db->query($isqlM);
 	     	 $numRadiBusq = $rsM->fields["RADI_NUME_RADI"];
