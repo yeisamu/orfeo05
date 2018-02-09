@@ -194,7 +194,7 @@ if(!$cc)
 		if ($subir_archivo)
 		{	
 			//include dirname(__FILE__).DIRECTORY_SEPARATOR.".".DIRECTORY_SEPARATOR."config.php";
-		echo	$directorio="bodega/".substr(trim($archivo),0,4)."/".strtoupper(substr(trim($archivo),4,$longitud_codigo_dependencia))."/docs/";
+			$directorio="bodega/".substr(trim($archivo),0,4)."/".strtoupper(substr(trim($archivo),4,$longitud_codigo_dependencia))."/docs/";
 			$userfile1_Temp = $_FILES['userfile1']['tmp_name'];
 			$bien2=move_uploaded_file($userfile1_Temp,$directorio.trim($archivoconversion));
 			if ($bien2)	//Si intento anexar archivo y Subio correctamente

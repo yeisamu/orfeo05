@@ -29,7 +29,8 @@
         |                       MAIN                               |
         +---------------------------------------------------------*/
 
-
+    foreach ($_GET as $key => $valor)   ${$key} = $valor;
+    foreach ($_POST as $key => $valor)   ${$key} = $valor;
   	$verradOld=$verrad;
     error_reporting(0); 
  	session_start(); 
