@@ -40,7 +40,7 @@ $puerto_mail=993;                     // Puerto de consulta de correo
                                       // ** El usario de consulta esta en la BS
 $servidor_mail_smtp="smtp.gmail.com";  // Servidor de Salida
 $puerto_mail_smtp=587;                     // Puerto del servidor de Mail (25 | 587)
-$cuenta_mail="yeison.velasquez@gmaill.com";      // Usuario de conexion
+$cuenta_mail="yeison.velasquez@gmail.com";      // Usuario de conexion
 $contrasena_mail="samu0118";           //  Contrasena
 
 //#############  Servidor de autenticacion LDAP / AD
