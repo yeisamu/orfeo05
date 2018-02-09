@@ -31,6 +31,7 @@
 
     foreach ($_GET as $key => $valor)   ${$key} = $valor;
     foreach ($_POST as $key => $valor)   ${$key} = $valor;
+    $verrad=$numRadi;
   	$verradOld=$verrad;
     error_reporting(0); 
  	session_start(); 
@@ -101,7 +102,7 @@ function regresar(){
 			   {
 			     $tipVinDocto = 0 ;
 			   }
-			echo $isqlM = "select * FROM RADICADO
+			 $isqlM = "select * FROM RADICADO
 	                   where RADI_NUME_RADI = '$verrad'";
 	         $rsM=$db->query($isqlM);
 	     	 $numRadiBusq = $rsM->fields["RADI_NUME_RADI"];
