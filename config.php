@@ -112,14 +112,14 @@ $logoSuperiorOrfeo=true;
 $imagenes = "imagenes";
 $imagenes2 = "/estilos/orfeo50/imagenes50/";
 //Codigo dep pruebas, en consultas no tiene encuenta esta dep para listar radicados
-$dependenciaPruebas="0998";
+$dependenciaPruebas="998";
 // Datos configuración para el formulario web pqrs
 $tipoRadicadoPqr = '4';
-$longitud_codigo_dependencia = '4';
+$longitud_codigo_dependencia = '3';
 
 // Dependencia encargada de manejar las PQRs
-$depeRadicaFormularioWeb = str_pad("0998",$longitud_codigo_dependencia,'0', STR_PAD_LEFT); 
-$entidad_depsal = str_pad("0999",$longitud_codigo_dependencia,'0', STR_PAD_LEFT);//Guarda el codigo de la dependencia de salida por defecto al radicar dcto de salida
+$depeRadicaFormularioWeb = str_pad("998",$longitud_codigo_dependencia,'0', STR_PAD_LEFT); 
+$entidad_depsal = str_pad("999",$longitud_codigo_dependencia,'0', STR_PAD_LEFT);//Guarda el codigo de la dependencia de salida por defecto al radicar dcto de salida
 $usuaRecibeWeb           = 1;  // Usuario que va a recepcionar los radicados web-pqr
 $secRadicaFormularioWeb  = "secr_tp4_0998"; // Esta secuencia es para los consecutivos de PQR para pruebas 
 ?>
